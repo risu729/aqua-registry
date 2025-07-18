@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: uber
+    repo_name: mockolo
+    description: Efficient Mock Generator for Swift
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "2.1.1"
+        asset: mockolo.{{.OS}}-universal.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+      - version_constraint: semver("<= 1.1.4")
+        no_asset: true
+      - version_constraint: semver("<= 1.5.0")
+      - version_constraint: semver("<= 1.6.2")
+        no_asset: true
+      - version_constraint: semver("<= 1.8.2")
+      - version_constraint: semver("<= 2.0.1")
+        asset: mockolo.{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+      - version_constraint: semver("<= 2.3.1")
+        asset: mockolo-{{.OS}}.artifactbundle.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: mockolo.{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements:
+              amd64: x86_64
+              arm64: aarch64
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: mockolo.{{.OS}}-universal.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
