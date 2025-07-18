@@ -1,0 +1,8 @@
+packages:
+  - name: danielgtaylor/restish@v0.20.0
+  - name: danielgtaylor/restish
+    version: v0.17.0
+  - name: danielgtaylor/restish
+    version: v0.9.1
+  - name: danielgtaylor/restish
+    version: v0.5.1
