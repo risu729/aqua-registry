@@ -51919,6 +51919,61 @@ packages:
       asset: "{{.Asset}}.sha256"
       algorithm: sha256
   - type: github_release
+    repo_owner: mint-lang
+    repo_name: mint
+    description: A refreshing programming language for the front-end web
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "0.19.0"
+        asset: mint-{{.Version}}-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: osx
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "0.20.0-alpha.1"
+        asset: mint-{{.Version}}-{{.OS}}
+        format: raw
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: mint-{{.Version}}-{{.OS}}-13
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.18.0")
+        asset: mint-{{.Version}}-{{.OS}}
+        format: raw
+        replacements:
+          darwin: osx
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.20.0-rc.1")
+        asset: mint-{{.Version}}-{{.OS}}-13
+        format: raw
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: mint-{{.Version}}-{{.OS}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: "true"
+        asset: mint-{{.Version}}-{{.OS}}-{{.Arch}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          darwin: osx
+        supported_envs:
+          - linux/amd64
+          - darwin
+  - type: github_release
     repo_owner: mintoolkit
     repo_name: mint
     aliases:
