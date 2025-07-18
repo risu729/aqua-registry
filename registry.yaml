@@ -2188,6 +2188,102 @@ packages:
         checksum:
           enabled: false
   - type: github_release
+    repo_owner: Dynatrace
+    repo_name: dynatrace-configuration-as-code
+    description: This tool automates deployment of Dynatrace Configuration to one or multiple Dynatrace environments
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v1.6.0"
+        asset: monaco-{{.OS}}-{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+        overrides:
+          - goos: darwin
+            asset: monaco-{{.OS}}-10.12-{{.Arch}}
+          - goos: windows
+            asset: monaco-{{.OS}}-4.0-{{.Arch}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v1.8.9"
+        asset: monaco-{{.OS}}-{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2.0.0-rc.4"
+        asset: monaco-{{.OS}}-{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.5.0")
+        asset: monaco-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        overrides:
+          - goos: darwin
+            asset: monaco-{{.OS}}-10.6-{{.Arch}}
+          - goos: windows
+            asset: monaco-{{.OS}}-4.0-{{.Arch}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.5.3")
+        asset: monaco-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        overrides:
+          - goos: darwin
+            asset: monaco-{{.OS}}-10.12-{{.Arch}}
+          - goos: windows
+            asset: monaco-{{.OS}}-4.0-{{.Arch}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.8.0")
+        asset: monaco-{{.OS}}-{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+        overrides:
+          - goos: darwin
+            asset: monaco-{{.OS}}-10.16-{{.Arch}}
+          - goos: windows
+            asset: monaco-{{.OS}}-4.0-{{.Arch}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.8.8")
+        asset: monaco-{{.OS}}-{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: monaco-{{.OS}}-{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+  - type: github_release
     repo_owner: EdJoPaTo
     repo_name: mqttui
     description: Subscribe to a MQTT Topic or publish something quickly from the terminal

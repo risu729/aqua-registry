@@ -1,0 +1,16 @@
+packages:
+  - name: Dynatrace/dynatrace-configuration-as-code@v2.24.1
+  - name: Dynatrace/dynatrace-configuration-as-code
+    version: v2.0.0-rc.4
+  - name: Dynatrace/dynatrace-configuration-as-code
+    version: v1.8.9
+  - name: Dynatrace/dynatrace-configuration-as-code
+    version: v1.8.8
+  - name: Dynatrace/dynatrace-configuration-as-code
+    version: v1.8.0
+  - name: Dynatrace/dynatrace-configuration-as-code
+    version: v1.6.0
+  - name: Dynatrace/dynatrace-configuration-as-code
+    version: v1.5.3
+  - name: Dynatrace/dynatrace-configuration-as-code
+    version: v1.5.0
