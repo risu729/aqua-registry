@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: sighupio
+    repo_name: furyctl
+    description: furyctl is the SIGHUP Distribution cluster lifecycle manager
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.8.0-rc1"
+        asset: furyctl-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: sha256sum.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: Version in ["v0.29.1", "v0.29.2"]
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+      - version_constraint: Version == "v0.29.2-rc.0"
+        asset: furyctl-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 0.1.4")
+        asset: furyctl-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        checksum:
+          type: github_release
+          asset: sha256sum.txt
+          algorithm: sha256
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.11.2")
+        asset: furyctl-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        checksum:
+          type: github_release
+          asset: sha256sum.txt
+          algorithm: sha256
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.25.0-beta.0")
+        asset: furyctl-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+      - version_constraint: "true"
+        asset: furyctl-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
