@@ -1,0 +1,8 @@
+packages:
+  - name: charmbracelet/melt@v0.6.2
+  - name: charmbracelet/melt
+    version: v0.6.0
+  - name: charmbracelet/melt
+    version: v0.5.0
+  - name: charmbracelet/melt
+    version: v0.4.1
