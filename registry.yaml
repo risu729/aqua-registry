@@ -5189,6 +5189,15 @@ packages:
           asset: replibyte_{{.Version}}_{{.Arch}}-{{.OS}}.{{.Format}}.sha256sum
           algorithm: sha256
   - type: github_release
+    repo_owner: RedMadRobot
+    repo_name: figma-export
+    description: Command line utility to export colors, typography, icons and images from Figma to Xcode / Android Studio project
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.22.0")
+      - version_constraint: "true"
+        no_asset: true
+  - type: github_release
     repo_owner: Rigellute
     repo_name: spotify-tui
     asset: spotify-tui-{{.OS}}.tar.gz
