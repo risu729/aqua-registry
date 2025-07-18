@@ -30106,6 +30106,131 @@ packages:
           - goos: windows
             asset: buck2-{{.Arch}}-{{.OS}}.exe.{{.Format}}
   - type: github_release
+    repo_owner: facebook
+    repo_name: dotslash
+    description: Simplified executable deployment
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.4.2"
+        asset: dotslash-{{.OS}}.{{.Version}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: dotslash-{{.OS}}-musl.{{.Arch}}.{{.Version}}.{{.Format}}
+            replacements:
+              amd64: x86_64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v0.5.3"
+        asset: dotslash-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: dotslash-{{.OS}}-musl.{{.Arch}}.{{.Version}}.{{.Format}}
+            replacements:
+              amd64: x86_64
+      - version_constraint: Version == "v0.5.4"
+        asset: dotslash-{{.OS}}-musl.{{.Arch}}.{{.Version}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x86_64
+          - goos: darwin
+            asset: dotslash-{{.OS}}-{{.Arch}}.{{.Version}}.{{.Format}}
+          - goos: windows
+            asset: dotslash-{{.OS}}.{{.Version}}.{{.Format}}
+      - version_constraint: Version == "v0.5.7"
+        asset: dotslash-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: dotslash-{{.OS}}-musl.{{.Arch}}.{{.Format}}
+            replacements:
+              amd64: x86_64
+              arm64: aarch64
+          - goos: darwin
+            goarch: amd64
+            asset: dotslash-{{.OS}}-{{.Arch}}.{{.Version}}.{{.Format}}
+          - goos: windows
+            goarch: amd64
+            asset: dotslash-{{.OS}}.{{.Format}}
+      - version_constraint: Version == "test-release-1"
+        asset: dotslash-{{.OS}}-musl.{{.Arch}}.{{.Format}}
+        format: tar.gz
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x86_64
+              arm64: aarch64
+          - goos: windows
+            asset: dotslash-{{.OS}}.{{.Format}}
+        supported_envs:
+          - linux
+          - windows/amd64
+      - version_constraint: semver("<= 0.4.1")
+        asset: dotslash-{{.OS}}.{{.Version}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 0.5.2")
+        asset: dotslash-{{.OS}}.{{.Version}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: dotslash-{{.OS}}-musl.{{.Arch}}.{{.Version}}.{{.Format}}
+            replacements:
+              amd64: x86_64
+      - version_constraint: semver("<= 0.5.6")
+        asset: dotslash-{{.OS}}-musl.{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x86_64
+              arm64: aarch64
+          - goos: darwin
+            goarch: amd64
+            asset: dotslash-{{.OS}}-{{.Arch}}.{{.Version}}.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: dotslash-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            asset: dotslash-{{.OS}}.{{.Format}}
+      - version_constraint: "true"
+        asset: dotslash-{{.OS}}-{{.Arch}}.{{.Version}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: dotslash-{{.OS}}-musl.{{.Arch}}.{{.Format}}
+            replacements:
+              amd64: x86_64
+              arm64: aarch64
+          - goos: darwin
+            goarch: arm64
+            asset: dotslash-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            asset: dotslash-{{.OS}}.{{.Format}}
+  - type: github_release
     repo_owner: fastfetch-cli
     repo_name: fastfetch
     description: An actively maintained, feature-rich and performance oriented, neofetch like system information tool
