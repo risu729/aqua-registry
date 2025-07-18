@@ -77788,6 +77788,192 @@ packages:
           - darwin
           - windows
           - amd64
+  - type: github_release
+    repo_owner: warrensbox
+    repo_name: terraform-switcher
+    description: A command line tool to switch between different versions of terraform  (install with homebrew and more)
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "0.2.175"
+        asset: terraform-switcher_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "0.2.192"
+        asset: terraform-switcher_{{.OS}}_{{.Arch}}_0.2_.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: terraform-switcher_0.2_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "0.3.195"
+        asset: terraform-switcher_v0.76.1_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: terraform-switcher_v0.76.1_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "0.7.0"
+        asset: tfswitch-{{.Version}}-beta1-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        complete_windows_ext: false
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "0.14.0-alpha-1"
+        asset: terraform-switcher_{{.OS}}_{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+      - version_constraint: Version == "1.0.0"
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: terraform-switcher_{{.Version}}_checksums.txt
+          algorithm: sha256
+      - version_constraint: semver("<= 0.2.189")
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.2.191")
+        asset: terraform-switcher_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.10.1010")
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: terraform-switcher_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.13.1221")
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: terraform-switcher_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: semver("<= 0.13.1308")
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: terraform-switcher_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: semver("<= 1.1.1")
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: terraform-switcher_{{.Version}}_checksums.txt
+          algorithm: sha256
+      - version_constraint: semver("<= 1.2.0-alpha2")
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          arm64: arm
+      - version_constraint: semver("<= 1.3.0")
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: terraform-switcher_{{.Version}}_checksums.txt
+          algorithm: sha256
+      - version_constraint: "true"
+        asset: terraform-switcher_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: terraform-switcher_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
   - name: wasmCloud/wasmCloud/wash
     type: github_release
     repo_owner: wasmCloud

@@ -1,0 +1,30 @@
+packages:
+  - name: warrensbox/terraform-switcher@v1.4.6
+  - name: warrensbox/terraform-switcher
+    version: v1.3.0
+  - name: warrensbox/terraform-switcher
+    version: v1.2.0-alpha2
+  - name: warrensbox/terraform-switcher
+    version: v1.1.1
+  - name: warrensbox/terraform-switcher
+    version: 1.0.0
+  - name: warrensbox/terraform-switcher
+    version: 0.14.0-alpha-1
+  - name: warrensbox/terraform-switcher
+    version: 0.13.1308
+  - name: warrensbox/terraform-switcher
+    version: 0.13.1221
+  - name: warrensbox/terraform-switcher
+    version: 0.10.1010
+  - name: warrensbox/terraform-switcher
+    version: 0.7.0
+  - name: warrensbox/terraform-switcher
+    version: 0.3.195
+  - name: warrensbox/terraform-switcher
+    version: 0.2.192
+  - name: warrensbox/terraform-switcher
+    version: 0.2.191
+  - name: warrensbox/terraform-switcher
+    version: 0.2.189
+  - name: warrensbox/terraform-switcher
+    version: 0.2.175
