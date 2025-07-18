@@ -1,0 +1,472 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: HaxeFoundation
+    repo_name: haxe
+    description: "Haxe - The Cross-Platform Toolkit"
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "3.2.0-rc1"
+        no_asset: true
+      - version_constraint: Version == "v2-0"
+        asset: haxe-2.0.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-01"
+        asset: haxe-2.1.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-02"
+        asset: haxe-2.2.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-03"
+        asset: haxe-2.3.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-04"
+        asset: haxe-2.4.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-05"
+        asset: haxe-2.5.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-06"
+        asset: haxe-2.6.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-07"
+        asset: haxe-2.7.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-08"
+        asset: haxe-2.8.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-09"
+        asset: haxe-2.9.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-10"
+        asset: haxe-2.10-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-00-rc1"
+        asset: haxe-2.0.0-rc.1-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          windows: win
+        supported_envs:
+          - windows/amd64
+      - version_constraint: Version == "v3-00"
+        asset: haxe-3.0.0-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-3.0.0-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: dmg
+            asset: haxe-3.0.0-{{.OS}}-installer.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v3-00-rc1"
+        asset: haxe-3.0.0-rc.1-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: darwin
+            format: tar.gz
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "v3.0.0-rc2"
+        asset: haxe-3.0.0-rc.2-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: darwin
+            format: tar.gz
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "v3.1.1"
+        asset: haxe-{{trimV .Version}}-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-{{trimV .Version}}-{{.OS}}-installer.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: haxe-{{trimV .Version}}-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "3.1.2"
+        asset: haxe-{{.Version}}-{{.OS}}-installer.{{.Format}}
+        format: pkg
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-{{.Version}}-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: windows
+            format: zip
+            asset: haxe-{{.Version}}-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "3.1.3"
+        asset: haxe-{{.Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-{{.Version}}-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-{{.Version}}-{{.OS}}-installer.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "3.2.0-rc2"
+        asset: haxe-3.2.0-rc.2-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-3.2.0-rc.2-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-3.2.0-rc.2-{{.OS}}-installer.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "3.2.0"
+        asset: haxe-{{.Version}}-{{.OS}}-installer.{{.Format}}
+        format: pkg
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-{{.Version}}-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: windows
+            format: zip
+            asset: haxe-{{.Version}}-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "3.2.1"
+        asset: haxe-{{.Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-{{.Version}}-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-{{.Version}}-{{.OS}}-installer.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "3.3.0-rc1"
+        asset: haxe-3.3.0-rc.1-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-3.3.0-rc.1-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-3.3.0-rc.1-{{.OS}}-installer.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "3.4.0-rc1"
+        asset: haxe-3.4.0-rc.1-{{.OS}}-installer.{{.Format}}
+        format: pkg
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-3.4.0-rc.1-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: windows
+            format: zip
+            asset: haxe-3.4.0-rc.1-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "3.4.0-rc2"
+        asset: haxe-3.4.0-rc.2-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-3.4.0-rc.2-{{.OS}}-installer.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: haxe-3.4.0-rc.2-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 3.1.0")
+        asset: haxe-{{trimV .Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-{{trimV .Version}}-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-{{trimV .Version}}-{{.OS}}-installer.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 3.4.3")
+        asset: haxe-{{.Version}}-{{.OS}}-installer.{{.Format}}
+        format: pkg
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-{{.Version}}-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: windows
+            format: zip
+            asset: haxe-{{.Version}}-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 3.4.7")
+        asset: haxe-{{.Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-{{.Version}}-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-{{.Version}}-{{.OS}}-installer.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 4.3.7")
+        asset: haxe-{{.Version}}-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-{{.Version}}-{{.OS}}-installer.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: haxe-{{.Version}}-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: haxe-{{.Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win64
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: haxe-{{.Version}}-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: darwin
+            format: pkg
+            asset: haxe-{{.Version}}-{{.OS}}-installer.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
