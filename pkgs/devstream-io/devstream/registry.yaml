@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: devstream-io
+    repo_name: devstream
+    description: "DevStream: the open-source DevOps toolchain manager (DTM)"
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.0.1")
+      - version_constraint: Version == "v0.0.2"
+        asset: dtm-{{.OS}}-{{.Arch}}
+        format: raw
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.1.0"
+        asset: dtm-{{.OS}}-{{.Arch}}
+        format: raw
+        supported_envs:
+          - linux/amd64
+          - darwin/arm64
+      - version_constraint: semver("<= 0.3.0")
+        asset: dtm-{{.OS}}-{{.Arch}}
+        format: raw
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.3.2")
+        asset: dtm-{{.OS}}-{{.Arch}}
+        format: raw
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.md5"
+          algorithm: md5
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.4.0"
+        asset: dtm-{{.OS}}-{{.Arch}}
+        format: raw
+        checksum:
+          type: github_release
+          asset: githubactions-golang-{{.OS}}-{{.Arch}}_{{trimV .Version}}.md5
+          algorithm: md5
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.5.0"
+        asset: dtm-{{.OS}}-{{.Arch}}
+        format: raw
+        checksum:
+          type: github_release
+          asset: jenkins-{{.OS}}-{{.Arch}}_{{trimV .Version}}.md5
+          algorithm: md5
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: "true"
+        asset: dtm-{{.OS}}-{{.Arch}}
+        format: raw
+        supported_envs:
+          - linux/amd64
+          - darwin
