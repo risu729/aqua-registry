@@ -3113,6 +3113,286 @@ packages:
       - linux
       - amd64
   - type: github_release
+    repo_owner: HaxeFoundation
+    repo_name: neko
+    description: The Neko Virtual Machine
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v1-2"
+        asset: neko-1.2-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v1-3"
+        asset: neko-1.3-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: darwin
+            format: tar.gz
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "v1-4"
+        asset: neko-{{.OS}}-uni-1.4.pkg.{{.Format}}
+        format: zip
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            asset: neko-1.4-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "v1-5"
+        asset: neko-1.5-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v1-4-5"
+        asset: neko-1.4.5-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          windows: win
+        supported_envs:
+          - windows/amd64
+      - version_constraint: Version == "v1-5-2"
+        asset: neko-1.5.2-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+        supported_envs:
+          - darwin
+      - version_constraint: Version == "v1-5-3"
+        asset: neko-1.5.3-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v1-6-0"
+        asset: neko-1.6.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v1-7-0"
+        asset: neko-1.7.0-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v1-7-1"
+        asset: neko-1.7.1-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v1-8-1"
+        asset: neko-1.8.1-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v1-8-2"
+        asset: neko-1.8.2-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            asset: neko-1.8.2-{{.OS}}64.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-0-0"
+        asset: neko-2.0.0-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x64
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+            asset: neko-2.0.0-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-1-0"
+        asset: neko-2.1.0-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x64
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+            asset: neko-2.1.0-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-2-0"
+        asset: neko-2.2.0-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x64
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+            asset: neko-2.2.0-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-3-0"
+        asset: neko-2.3.0-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x64
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+            asset: neko-2.3.0-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2-4-0"
+        asset: neko-2.4.0-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x64
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: neko-2.4.0-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: neko-2.4.0-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: neko-2.4.0-{{.OS}}.{{.Format}}
+      - version_constraint: Version == "v2-4-0-rc"
+        asset: neko-2.4.0-rc-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x64
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: neko-2.4.0-rc-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: neko-2.4.0-rc-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: neko-2.4.0-rc-{{.OS}}.{{.Format}}
+      - version_constraint: Version == "v2-4-0-rc-1"
+        asset: neko-2.4.0-rc.1-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x64
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: neko-2.4.0-rc.1-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: neko-2.4.0-rc.1-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: neko-2.4.0-rc.1-{{.OS}}.{{.Format}}
+      - version_constraint: "true"
+        asset: neko-2.4.1-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x64
+          darwin: osx
+          windows: win
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: neko-2.4.1-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: neko-2.4.1-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: neko-2.4.1-{{.OS}}.{{.Format}}
+  - type: github_release
     repo_owner: IBM-Cloud
     repo_name: redli
     description: "Redli - A humane alternative to the Redis-cli and TLS"

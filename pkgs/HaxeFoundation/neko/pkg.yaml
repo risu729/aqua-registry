@@ -1,0 +1,40 @@
+packages:
+  - name: HaxeFoundation/neko@v2-4-1
+  - name: HaxeFoundation/neko
+    version: v2-4-0-rc-1
+  - name: HaxeFoundation/neko
+    version: v2-4-0-rc
+  - name: HaxeFoundation/neko
+    version: v2-4-0
+  - name: HaxeFoundation/neko
+    version: v2-3-0
+  - name: HaxeFoundation/neko
+    version: v2-2-0
+  - name: HaxeFoundation/neko
+    version: v2-1-0
+  - name: HaxeFoundation/neko
+    version: v2-0-0
+  - name: HaxeFoundation/neko
+    version: v1-8-2
+  - name: HaxeFoundation/neko
+    version: v1-8-1
+  - name: HaxeFoundation/neko
+    version: v1-7-1
+  - name: HaxeFoundation/neko
+    version: v1-7-0
+  - name: HaxeFoundation/neko
+    version: v1-6-0
+  - name: HaxeFoundation/neko
+    version: v1-5-3
+  - name: HaxeFoundation/neko
+    version: v1-5-2
+  - name: HaxeFoundation/neko
+    version: v1-4-5
+  - name: HaxeFoundation/neko
+    version: v1-5
+  - name: HaxeFoundation/neko
+    version: v1-4
+  - name: HaxeFoundation/neko
+    version: v1-3
+  - name: HaxeFoundation/neko
+    version: v1-2
