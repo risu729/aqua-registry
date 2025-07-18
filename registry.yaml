@@ -76148,6 +76148,162 @@ packages:
             format: raw
             asset: dug
   - type: github_release
+    repo_owner: unisonweb
+    repo_name: unison
+    description: A friendly programming language from the future
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["affine-improvements-build", "pattern-compilation-pr-5557-build", "stack-assertions-build"]
+        asset: ucm-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version in ["arm-runners-build", "trunk-build"]
+        asset: ucm-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: Version in ["latest-Linux", "M2-Linux"]
+        asset: unison-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+      - version_constraint: Version in ["latest-macOS", "M2-macOS"]
+        asset: unison-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macOS
+        supported_envs:
+          - darwin
+      - version_constraint: Version == "release/M1"
+        asset: unison-{{.OS}}64
+        format: raw
+        replacements:
+          darwin: osx
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x64
+          - goos: darwin
+            asset: unison-{{.OS}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version in ["nicer-affine-handlers-build", "nicer-affine-handlers-build", "nicer-affine-handlers-build", "nicer-affine-handlers-build", "nicer-affine-handlers-build", "nicer-affine-handlers-build", "nicer-affine-handlers-build", "nicer-affine-handlers-build"]
+        asset: ucm-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.27")
+        asset: ucm-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.41")
+        asset: ucm-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.43")
+        asset: ucm-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: Version in ["release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m", "release/M1m"]
+        asset: unison-{{.OS}}64.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: osx
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x64
+          - goos: darwin
+            asset: unison-{{.OS}}.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version in ["release/M2l", "release/M2l", "release/M2l", "release/M2l", "release/M2l", "release/M2l", "release/M2l"]
+        asset: ucm-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version in ["release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j", "release/M5j"]
+        asset: ucm-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: ucm-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+  - type: github_release
     repo_owner: updatecli
     repo_name: updatecli
     description: A Declarative Dependency Management tool

@@ -1,0 +1,26 @@
+packages:
+  - name: unisonweb/unison@unboxed-arithmetic-build
+  - name: unisonweb/unison
+    version: release/M3
+  - name: unisonweb/unison
+    version: release/M2f
+  - name: unisonweb/unison
+    version: release/M1a
+  - name: unisonweb/unison
+    version: release/M1
+  - name: unisonweb/unison
+    version: release/0.5.43
+  - name: unisonweb/unison
+    version: release/0.5.41
+  - name: unisonweb/unison
+    version: release/0.5.27
+  - name: unisonweb/unison
+    version: latest-macOS
+  - name: unisonweb/unison
+    version: latest-Linux
+  - name: unisonweb/unison
+    version: better-bools-build
+  - name: unisonweb/unison
+    version: arm-runners-build
+  - name: unisonweb/unison
+    version: affine-improvements-build
