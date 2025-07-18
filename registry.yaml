@@ -1982,6 +1982,58 @@ packages:
         supported_envs:
           - linux
           - darwin
+  - type: github_release
+    repo_owner: DarthSim
+    repo_name: overmind
+    description: Process manager for Procfile-based applications and tmux
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 2.2.1")
+        asset: overmind-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: gz
+        rosetta2: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.3.0")
+        asset: overmind-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: gz
+        rosetta2: true
+        replacements:
+          darwin: macos
+        checksum:
+          type: github_release
+          asset: overmind-{{.Version}}-{{.OS}}-{{.Arch}}.gz.sha256sum
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: overmind-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: gz
+        replacements:
+          darwin: macos
+        checksum:
+          type: github_release
+          asset: overmind-{{.Version}}-{{.OS}}-{{.Arch}}.gz.sha256sum
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin
   - name: DeNA/unity-meta-check/gh-action
     type: github_release
     repo_owner: DeNA
