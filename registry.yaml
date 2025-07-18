@@ -28801,6 +28801,37 @@ packages:
           - goos: windows
             format: zip
   - type: github_release
+    repo_owner: elementalvoid
+    repo_name: tonnage
+    description: Tonnage is a small utility to summarize the resource capacity and allocation of a Kubernetes cluster
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.0.2")
+        asset: tonnage-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: tonnage_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+  - type: github_release
     repo_owner: elkowar
     repo_name: pipr
     description: A tool to interactively write shell pipelines
