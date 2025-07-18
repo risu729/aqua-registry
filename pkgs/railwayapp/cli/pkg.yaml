@@ -1,0 +1,18 @@
+packages:
+  - name: railwayapp/cli@v4.5.5
+  - name: railwayapp/cli
+    version: v3.19.1
+  - name: railwayapp/cli
+    version: v3.17.1
+  - name: railwayapp/cli
+    version: v3.0.5
+  - name: railwayapp/cli
+    version: v3.0.0
+  - name: railwayapp/cli
+    version: v2.1.0
+  - name: railwayapp/cli
+    version: v0.2.43
+  - name: railwayapp/cli
+    version: v0.1.30
+  - name: railwayapp/cli
+    version: v0.1.24
