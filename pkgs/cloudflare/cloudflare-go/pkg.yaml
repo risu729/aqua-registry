@@ -1,0 +1,10 @@
+packages:
+  - name: cloudflare/cloudflare-go@v0.115.0
+  - name: cloudflare/cloudflare-go
+    version: v0.70.0
+  - name: cloudflare/cloudflare-go
+    version: v0.21.0
+  - name: cloudflare/cloudflare-go
+    version: v0.14.0
+  - name: cloudflare/cloudflare-go
+    version: v0.8.5
