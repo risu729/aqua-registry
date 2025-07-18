@@ -1,0 +1,6 @@
+packages:
+  - name: depot/cli@v2.95.0
+  - name: depot/cli
+    version: v2.23.0
+  - name: depot/cli
+    version: v2.21.1

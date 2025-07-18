@@ -25523,6 +25523,44 @@ packages:
         files:
           - name: dependabot
   - type: github_release
+    repo_owner: depot
+    repo_name: cli
+    description: Depot CLI, build your Docker images in the cloud
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 2.21.1")
+        asset: depot_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macOS
+        checksum:
+          type: github_release
+          asset: depot_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.23.0")
+        asset: depot_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: depot_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: depot_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: depot_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+  - type: github_release
     repo_owner: derailed
     repo_name: k9s
     description: Kubernetes CLI To Manage Your Clusters In Style
