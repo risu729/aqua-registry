@@ -66914,6 +66914,121 @@ packages:
       asset: checksums.txt
       algorithm: sha256
   - type: github_release
+    repo_owner: simonmichael
+    repo_name: hledger
+    description: Robust, fast, intuitive plain text accounting tool with CLI, TUI and web interfaces
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "hledger-1.17.1.1"
+      - version_constraint: Version == "1.18"
+        asset: hledger-{{.OS}}-unoptimised.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "1.41"
+        asset: hledger-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.21.0")
+        asset: hledger-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 1.22.1")
+        asset: hledger-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: amd64
+            asset: hledger-{{.OS}}-static-{{.Arch}}.{{.Format}}
+            replacements:
+              amd64: x64
+          - goos: linux
+            goarch: arm64
+            asset: hledger-{{.OS}}-static-{{.Arch}}32v7.{{.Format}}
+            replacements:
+              arm64: arm
+      - version_constraint: semver("<= 1.24.0")
+        asset: hledger-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: hledger-{{.OS}}-static-{{.Arch}}.{{.Format}}
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.25.0")
+        asset: hledger-{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: hledger-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.32.3")
+        asset: hledger-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.33.1")
+        asset: hledger-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: hledger-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+  - type: github_release
     repo_owner: simonwhitaker
     repo_name: gibo
     description: Easy access to gitignore boilerplates

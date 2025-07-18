@@ -1,0 +1,20 @@
+packages:
+  - name: simonmichael/hledger@1.43.2
+  - name: simonmichael/hledger
+    version: "1.41"
+  - name: simonmichael/hledger
+    version: 1.33.1
+  - name: simonmichael/hledger
+    version: 1.32.3
+  - name: simonmichael/hledger
+    version: "1.25"
+  - name: simonmichael/hledger
+    version: "1.24"
+  - name: simonmichael/hledger
+    version: 1.22.1
+  - name: simonmichael/hledger
+    version: "1.21"
+  - name: simonmichael/hledger
+    version: "1.18"
+  - name: simonmichael/hledger
+    version: hledger-1.17.1.1
