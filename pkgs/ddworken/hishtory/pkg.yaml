@@ -1,0 +1,66 @@
+packages:
+  - name: ddworken/hishtory@xattr-test-release-4
+  - name: ddworken/hishtory
+    version: v0.335
+  - name: ddworken/hishtory
+    version: v0.282
+  - name: ddworken/hishtory
+    version: v0.240
+  - name: ddworken/hishtory
+    version: v0.238
+  - name: ddworken/hishtory
+    version: v0.220
+  - name: ddworken/hishtory
+    version: v0.219
+  - name: ddworken/hishtory
+    version: v0.218
+  - name: ddworken/hishtory
+    version: v0.196
+  - name: ddworken/hishtory
+    version: v0.187
+  - name: ddworken/hishtory
+    version: v0.184
+  - name: ddworken/hishtory
+    version: v0.172
+  - name: ddworken/hishtory
+    version: v0.154
+  - name: ddworken/hishtory
+    version: v0.147
+  - name: ddworken/hishtory
+    version: v0.128
+  - name: ddworken/hishtory
+    version: v0.106
+  - name: ddworken/hishtory
+    version: v0.105
+  - name: ddworken/hishtory
+    version: v0.99
+  - name: ddworken/hishtory
+    version: v0.97
+  - name: ddworken/hishtory
+    version: v0.92-darwin-arm64
+  - name: ddworken/hishtory
+    version: v0.88-darwin-arm64
+  - name: ddworken/hishtory
+    version: v0.81-linux-amd64
+  - name: ddworken/hishtory
+    version: v0.80-linux-amd64
+  - name: ddworken/hishtory
+    version: v0.78-linux-amd64
+  - name: ddworken/hishtory
+    version: v0.57
+  - name: ddworken/hishtory
+    version: v0.54-linux-amd64
+  - name: ddworken/hishtory
+    version: v0.54-darwin-arm64
+  - name: ddworken/hishtory
+    version: v0.54-darwin-amd64
+  - name: ddworken/hishtory
+    version: v0.50-xattr
+  - name: ddworken/hishtory
+    version: v0.32-linux-amd64
+  - name: ddworken/hishtory
+    version: v0.32-darwin-arm64
+  - name: ddworken/hishtory
+    version: v0.32-darwin-amd64
+  - name: ddworken/hishtory
+    version: v0.29
