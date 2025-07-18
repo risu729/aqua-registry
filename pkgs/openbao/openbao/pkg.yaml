@@ -1,0 +1,10 @@
+packages:
+  - name: openbao/openbao@v2.3.1
+  - name: openbao/openbao
+    version: v2.3.0-beta20250528
+  - name: openbao/openbao
+    version: v2.1.1
+  - name: openbao/openbao
+    version: v2.0.0-beta20240618
+  - name: openbao/openbao
+    version: v2.0.0-alpha20240329
