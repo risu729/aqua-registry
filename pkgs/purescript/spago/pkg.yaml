@@ -1,0 +1,22 @@
+packages:
+  - name: purescript/spago@sh-compat-test
+  - name: purescript/spago
+    version: 0.21.0
+  - name: purescript/spago
+    version: 0.20.3
+  - name: purescript/spago
+    version: 0.18.0
+  - name: purescript/spago
+    version: 0.17.0
+  - name: purescript/spago
+    version: 0.14.0
+  - name: purescript/spago
+    version: 0.12.1.0
+  - name: purescript/spago
+    version: 0.12.0.0
+  - name: purescript/spago
+    version: 0.11.1.0
+  - name: purescript/spago
+    version: 0.10.0.0
+  - name: purescript/spago
+    version: 0.6.3.0

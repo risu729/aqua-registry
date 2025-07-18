@@ -61239,6 +61239,126 @@ packages:
       asset: tf2pulumi_{{trimV .Version}}_checksums.txt
       algorithm: sha256
   - type: github_release
+    repo_owner: purescript
+    repo_name: spago
+    description: PureScript package manager and build tool
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "0.12.0.0"
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: osx
+        overrides:
+          - goos: darwin
+            asset: "{{.OS}}-static.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "0.12.1.0"
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: osx
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "0.18.0"
+        asset: "{{.OS}}-latest.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macOS
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.6.3.0")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: osx
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.10.0.0")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: osx
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.11.1.0")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: osx
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}-dynamic.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.14.0")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: osx
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}-static.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.17.0")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: osx
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.20.3")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macOS
+          linux: Linux
+          windows: Windows
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.21.0")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macOS
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: "{{.OS}}.sha1"
+          algorithm: sha1
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: osx
+        supported_envs:
+          - linux/amd64
+          - darwin
+  - type: github_release
     repo_owner: purpleclay
     repo_name: dns53
     description: Dynamic DNS within Amazon Route53. Expose your EC2 quickly, easily and privately
