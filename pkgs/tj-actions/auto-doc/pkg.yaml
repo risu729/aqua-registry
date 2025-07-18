@@ -1,0 +1,10 @@
+packages:
+  - name: tj-actions/auto-doc@v3.6.0
+  - name: tj-actions/auto-doc
+    version: v3
+  - name: tj-actions/auto-doc
+    version: v2
+  - name: tj-actions/auto-doc
+    version: v1.2.6
+  - name: tj-actions/auto-doc
+    version: v1.2.5

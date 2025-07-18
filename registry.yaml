@@ -74316,6 +74316,90 @@ packages:
       - name: tinygo
         src: tinygo/bin/tinygo
   - type: github_release
+    repo_owner: tj-actions
+    repo_name: auto-doc
+    description: ":octocat: Github action that turns your reusable workflows and custom actions into easy to read markdown tables"
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v1.2.6"
+        asset: auto-doc_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: Version == "v2"
+        asset: auto-doc_{{trimV .Version}}.0.0_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: Version == "v3"
+        asset: auto-doc_{{trimV .Version}}.0.0_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: semver("<= 1.2.3")
+        no_asset: true
+      - version_constraint: semver("<= 1.2.5")
+        asset: auto-doc_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+      - version_constraint: "true"
+        asset: auto-doc_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+  - type: github_release
     repo_owner: tkuchiki
     repo_name: alp
     description: Access Log Profiler
