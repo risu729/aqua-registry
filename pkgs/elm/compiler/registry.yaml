@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: elm
+    repo_name: compiler
+    description: Compiler for Elm, a functional language for reliable webapps
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "0.16.0"
+        asset: Elm-Platform-0.16.{{.Format}}
+        format: pkg
+        overrides:
+          - goos: windows
+            format: raw
+            asset: Elm-Platform-0.16
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "0.17.0"
+        asset: Elm-Platform-0.17.{{.Format}}
+        format: pkg
+        overrides:
+          - goos: windows
+            format: raw
+            asset: Elm-Platform-0.17
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "0.17.1"
+        asset: Elm-Platform-{{.Version}}.{{.Format}}
+        format: pkg
+        overrides:
+          - goos: windows
+            format: raw
+            asset: Elm-Platform-{{.Version}}
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "0.18.0"
+        asset: Elm-Platform-0.18.{{.Format}}
+        format: pkg
+        overrides:
+          - goos: windows
+            format: raw
+            asset: Elm-Platform-0.18
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "0.19.0"
+        asset: binary-for-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: 64-bit
+          darwin: mac
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: binary-for-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: 64-bit
+          darwin: mac
+        overrides:
+          - goos: darwin
+            asset: binary-for-{{.OS}}-{{.Arch}}-ARM.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
