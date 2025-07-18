@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: flux-subsystem-argo
+    repo_name: flamingo
+    description: Flux Subsystem for Argo
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.10.2")
+        asset: flamingo_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: flamingo_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+          - goos: windows
+            format: zip
+      - version_constraint: "true"
+        asset: fsa-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: gz
+        supported_envs:
+          - linux/amd64

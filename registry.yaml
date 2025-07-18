@@ -31148,6 +31148,30 @@ packages:
           - linux
           - darwin
   - type: github_release
+    repo_owner: flux-subsystem-argo
+    repo_name: flamingo
+    description: Flux Subsystem for Argo
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.10.2")
+        asset: flamingo_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: flamingo_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+          - goos: windows
+            format: zip
+      - version_constraint: "true"
+        asset: fsa-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: gz
+        supported_envs:
+          - linux/amd64
+  - type: github_release
     repo_owner: fluxcd
     repo_name: flux2
     description: Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit

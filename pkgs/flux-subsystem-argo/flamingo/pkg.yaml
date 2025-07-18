@@ -1,0 +1,4 @@
+packages:
+  - name: flux-subsystem-argo/flamingo@v2.2.5-fl.0
+  - name: flux-subsystem-argo/flamingo
+    version: v0.10.2
