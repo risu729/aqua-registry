@@ -1,0 +1,50 @@
+packages:
+  - name: apauley/hledger-flow@v0.15.0
+  - name: apauley/hledger-flow
+    version: v0.14.4
+  - name: apauley/hledger-flow
+    version: v0.14.3.0
+  - name: apauley/hledger-flow
+    version: v0.14.2.0
+  - name: apauley/hledger-flow
+    version: v0.14.1.0
+  - name: apauley/hledger-flow
+    version: v0.14.0.0
+  - name: apauley/hledger-flow
+    version: v0.13.2.0
+  - name: apauley/hledger-flow
+    version: v0.13.1.0
+  - name: apauley/hledger-flow
+    version: v0.13.0.0
+  - name: apauley/hledger-flow
+    version: v0.12.4.0
+  - name: apauley/hledger-flow
+    version: v0.12.3.1
+  - name: apauley/hledger-flow
+    version: v0.12.3.0
+  - name: apauley/hledger-flow
+    version: v0.12.2.1
+  - name: apauley/hledger-flow
+    version: v0.12.2.0
+  - name: apauley/hledger-flow
+    version: v0.12.1.0
+  - name: apauley/hledger-flow
+    version: v0.12.0.0-beta
+  - name: apauley/hledger-flow
+    version: v0.11.3.0-beta
+  - name: apauley/hledger-flow
+    version: v0.11.2.0-beta
+  - name: apauley/hledger-flow
+    version: v0.11.1.2-beta-pre
+  - name: apauley/hledger-flow
+    version: v0.11.1.2-beta-RC1
+  - name: apauley/hledger-flow
+    version: v0.11.1.2-beta
+  - name: apauley/hledger-flow
+    version: v0.11.1.1-beta
+  - name: apauley/hledger-flow
+    version: v0.11.1.0-beta
+  - name: apauley/hledger-flow
+    version: v0.11-beta
+  - name: apauley/hledger-flow
+    version: v0.10-beta

@@ -10832,6 +10832,315 @@ packages:
       - version_constraint: "true"
         no_asset: true
   - type: github_release
+    repo_owner: apauley
+    repo_name: hledger-flow
+    description: An hledger/ledger-cli workflow focusing on automated statement import and classification
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.10-beta"
+        asset: hledger-makeitso-v0.10-{{.OS}}-osx.{{.Format}}
+        format: tar.gz
+        supported_envs:
+          - linux/amd64
+      - version_constraint: Version == "v0.11-beta"
+        asset: hledger-flow-{{.OS}}-{{.Arch}}-v0.11.0.0-9cd1222.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.11.1.0-beta"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_v0.11.1.0_lts-13.16_f211c27.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.11.1.1-beta"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_v0.11.1.1_lts-13.16_f2b9af4.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.11.1.2-beta"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_v0.11.1.2_lts-13.16_8913d56.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.11.1.2-beta-RC1"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_v0.11.1.2_lts-13.16_59fad79.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.11.1.2-beta-pre"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_v0.11.1.2_lts-13.16_d9bfece.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+        supported_envs:
+          - darwin
+      - version_constraint: Version == "v0.11.2.0-beta"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_v0.11.2.0_lts-13.16_c897e95.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.11.3.0-beta"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_v0.11.3.0_lts-13.16_bee8986.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.12.0.0-beta"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_v0.12.0.0_lts-13.16_1729200.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.12.1.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_lts-13.20_9005b10.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.12.2.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}__11fc437.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.12.2.1"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_nightly-2019-05-16_58fd1ab.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.12.3.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_8bc61fb.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_8bc61fb.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.12.3.1"
+        asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_f639da3.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: linux
+            asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_f639da3.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.12.4.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_4b9b027.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_4b9b027.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.13.0.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_ced0b70.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_ced0b70.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.13.1.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_78208c3.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_78208c3.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.13.2.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_e8e508b.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_e8e508b.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.14.0.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_8cfb304.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_8cfb304.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.14.1.0"
+        asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_d404f77.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: linux
+            asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_d404f77.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.14.2.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_85b2598.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_85b2598.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.14.3.0"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_b1d86db.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_b1d86db.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.14.4"
+        asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_bec3ec0.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: darwin
+            asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_bec3ec0.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: "true"
+        asset: hledger-flow_MacOSX_{{.OS}}_{{.Arch}}_{{.Version}}_2b025fe.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        overrides:
+          - goos: linux
+            asset: hledger-flow_{{.OS}}_{{.Arch}}_{{.Version}}_2b025fe.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+  - type: github_release
     repo_owner: aporia-ai
     repo_name: kubesurvival
     description: Significantly reduce Kubernetes costs by finding the cheapest machine types that can run your workloads
