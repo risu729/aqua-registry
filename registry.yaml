@@ -51179,6 +51179,27 @@ packages:
           - linux
           - windows/amd64
   - type: github_release
+    repo_owner: mhausenblas
+    repo_name: cidrchk
+    description: CLI tool for CIDR range operations (check, generate)
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: "true"
+        asset: cidrchk_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: cidrchk_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+          - goos: windows
+            format: zip
+  - type: github_release
     repo_owner: michidk
     repo_name: vscli
     description: A CLI tool to launch vscode projects, which supports devcontainers
