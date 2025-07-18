@@ -1,0 +1,20 @@
+packages:
+  - name: apollographql/router@v2.5.0-preview.0
+  - name: apollographql/router
+    version: v1.39.1-rc.0
+  - name: apollographql/router
+    version: v1.38.0-rc.0
+  - name: apollographql/router
+    version: v1.37.0
+  - name: apollographql/router
+    version: v1.20.1-alpha.0
+  - name: apollographql/router
+    version: v1.0.0
+  - name: apollographql/router
+    version: v0.16.0
+  - name: apollographql/router
+    version: v0.12.1-alpha-defer2
+  - name: apollographql/router
+    version: v0.12.0
+  - name: apollographql/router
+    version: v0.9.1
