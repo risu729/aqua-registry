@@ -1,0 +1,6 @@
+packages:
+  - name: jckuester/awsls@v0.11.0
+  - name: jckuester/awsls
+    version: v0.9.1
+  - name: jckuester/awsls
+    version: v0.6.0
