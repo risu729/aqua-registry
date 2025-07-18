@@ -1,0 +1,171 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: purescript
+    repo_name: purescript
+    description: A strongly-typed language that compiles to JavaScript
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["v0.13.1", "v0.13.7", "v0.15.0-alpha-03"]
+        no_asset: true
+      - version_constraint: Version in ["v0.6.2", "v0.6.6", "v0.7.6", "v0.10.0-rc.1", "v0.11.0-rc.1", "v0.14.8"]
+        asset: "{{.OS}}64.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x64
+          - goos: darwin
+            asset: "{{.OS}}.{{.Format}}"
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.6.7"
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        checksum:
+          type: github_release
+          asset: "{{.OS}}.md5"
+          algorithm: md5
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v0.7.2.1"
+        asset: "{{.OS}}64.{{.Format}}"
+        format: tar.gz
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+      - version_constraint: semver("<= 0.6.1.2")
+        no_asset: true
+      - version_constraint: semver("<= 0.6.5")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        checksum:
+          type: github_release
+          asset: "{{.OS}}.md5"
+          algorithm: md5
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.6.8")
+        asset: "{{.OS}}64.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x64
+          - goos: darwin
+            asset: "{{.OS}}.{{.Format}}"
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.8.4")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        checksum:
+          type: github_release
+          asset: "{{.OS}}.md5"
+          algorithm: md5
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.15.9-0")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.15.16-1")
+        asset: "{{.OS}}-{{.Arch}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        overrides:
+          - goos: linux
+            goarch: amd64
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+          - goos: darwin
+            goarch: amd64
+            asset: "{{.OS}}.{{.Format}}"
+          - goos: windows
+            asset: "{{.OS}}.{{.Format}}"
+      - version_constraint: semver("<= 0.15.16-4")
+        asset: "{{.OS}}-{{.Arch}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        overrides:
+          - goos: linux
+            goarch: amd64
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+          - goos: windows
+            asset: "{{.OS}}.{{.Format}}"
+        supported_envs:
+          - linux
+          - darwin/arm64
+          - windows/amd64
+      - version_constraint: "true"
+        asset: "{{.OS}}-{{.Arch}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        overrides:
+          - goos: linux
+            goarch: amd64
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+          - goos: darwin
+            goarch: amd64
+            asset: "{{.OS}}.{{.Format}}"
+          - goos: windows
+            asset: "{{.OS}}.{{.Format}}"
