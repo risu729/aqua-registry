@@ -54477,6 +54477,36 @@ packages:
       - name: zf
         src: "zf-{{.Version}}-{{.Arch}}-{{.OS}}"
   - type: github_release
+    repo_owner: natesales
+    repo_name: q
+    description: A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.5.1"
+        asset: q_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+      - version_constraint: semver("<= 0.4.4")
+        asset: q_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+      - version_constraint: "true"
+        asset: q_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+  - type: github_release
     repo_owner: nats-io
     repo_name: natscli
     description: The NATS Command Line Interface

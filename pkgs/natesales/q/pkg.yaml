@@ -1,0 +1,6 @@
+packages:
+  - name: natesales/q@v0.19.2
+  - name: natesales/q
+    version: v0.5.1
+  - name: natesales/q
+    version: v0.4.4
