@@ -1,0 +1,6 @@
+packages:
+  - name: cloudfoundry-incubator/bosh-backup-and-restore@v1.9.74
+  - name: cloudfoundry-incubator/bosh-backup-and-restore
+    version: v1.9.49
+  - name: cloudfoundry-incubator/bosh-backup-and-restore
+    version: v1.3.1
