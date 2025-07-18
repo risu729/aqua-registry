@@ -1,0 +1,12 @@
+packages:
+  - name: jwt-rs/jwt-ui@v1.3.0
+  - name: jwt-rs/jwt-ui
+    version: v1.0.7
+  - name: jwt-rs/jwt-ui
+    version: v1.0.2
+  - name: jwt-rs/jwt-ui
+    version: v0.0.5
+  - name: jwt-rs/jwt-ui
+    version: v0.0.4
+  - name: jwt-rs/jwt-ui
+    version: v0.0.3
