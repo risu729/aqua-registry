@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: ethereum
+    repo_name: solidity
+    description: Solidity, the Smart Contract Programming Language
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["v0.1.2", "v0.4.4"]
+        no_asset: true
+      - version_constraint: Version == "preview-0.8.x"
+        asset: solc-static-{{.OS}}
+        format: raw
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: solc-{{.OS}}
+          - goos: windows
+            asset: solc
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v0.1.3"
+      - version_constraint: Version == "v0.4.0"
+      - version_constraint: Version == "v0.4.3"
+      - version_constraint: Version == "v0.4.26"
+        asset: solidity-{{.OS}}-{{trimV .Version}}.{{.Format}}
+        format: zip
+        overrides:
+          - goos: linux
+            format: raw
+            asset: solc-static-{{.OS}}
+        supported_envs:
+          - linux/amd64
+          - windows/amd64
+      - version_constraint: semver("<= 0.1.7")
+        no_asset: true
+      - version_constraint: semver("<= 0.2.1")
+      - version_constraint: semver("<= 0.3.6")
+        no_asset: true
+      - version_constraint: semver("<= 0.4.10")
+        asset: solidity-{{.OS}}.{{.Format}}
+        format: zip
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 0.6.8")
+        asset: solidity-{{.OS}}.{{.Format}}
+        format: zip
+        overrides:
+          - goos: linux
+            format: raw
+            asset: solc-static-{{.OS}}
+        supported_envs:
+          - linux/amd64
+          - windows/amd64
+      - version_constraint: semver("<= 0.7.1")
+        asset: solc-static-{{.OS}}
+        format: raw
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: solc-{{.OS}}
+          - goos: windows
+            format: zip
+            asset: solidity-{{.OS}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: solc-{{.OS}}
+        format: raw
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: solc-static-{{.OS}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
