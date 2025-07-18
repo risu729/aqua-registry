@@ -1,0 +1,6 @@
+packages:
+  - name: pantsbuild/scie-pants@v0.12.5
+  - name: pantsbuild/scie-pants
+    version: v0.12.2
+  - name: pantsbuild/scie-pants
+    version: v0.12.1
