@@ -40972,6 +40972,42 @@ packages:
           - windows
           - amd64
   - type: github_release
+    repo_owner: jaspervdj
+    repo_name: patat
+    description: Terminal-based presentations using Pandoc
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.8.4.1")
+        asset: patat-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x86_64
+        supported_envs:
+          - linux/amd64
+      - version_constraint: semver("<= 0.12.0.0")
+        asset: patat-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+        overrides:
+          - goos: linux
+            format: tar.gz
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: "true"
+        asset: patat-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        replacements:
+          amd64: x86_64
+        overrides:
+          - goos: linux
+            format: tar.gz
+        supported_envs:
+          - linux/amd64
+          - darwin/arm64
+  - type: github_release
     repo_owner: jckuester
     repo_name: terradozer
     description: Terraform destroy without configuration files
