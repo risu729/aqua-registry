@@ -13304,6 +13304,47 @@ packages:
           - goos: linux
             asset: zed_{{trimV .Version}}_{{.OS}}_{{.Arch}}_gnu.{{.Format}}
   - type: github_release
+    repo_owner: aws-amplify
+    repo_name: amplify-cli
+    description: The AWS Amplify CLI is a toolchain for simplifying serverless web and mobile development
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 4.32.1-alpha.0")
+        asset: amplify-pkg-{{.OS}}
+        format: raw
+        replacements:
+          darwin: macos
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 10.5.2")
+        asset: amplify-pkg-{{.OS}}.{{.Format}}
+        format: tgz
+        replacements:
+          darwin: macos
+          windows: win
+        overrides:
+          - goos: windows
+            asset: amplify-pkg-{{.OS}}.exe.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: amplify-pkg-{{.OS}}.{{.Format}}
+        format: tgz
+        replacements:
+          darwin: macos
+          windows: win
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: amplify-pkg-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            asset: amplify-pkg-{{.OS}}.exe.{{.Format}}
+  - type: github_release
     repo_owner: aws-cloudformation
     repo_name: rain
     description: A development workflow tool for working with AWS CloudFormation
