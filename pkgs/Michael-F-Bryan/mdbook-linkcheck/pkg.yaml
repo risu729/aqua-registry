@@ -1,0 +1,6 @@
+packages:
+  - name: Michael-F-Bryan/mdbook-linkcheck@v0.7.7
+  - name: Michael-F-Bryan/mdbook-linkcheck
+    version: v0.7.4
+  - name: Michael-F-Bryan/mdbook-linkcheck
+    version: v0.7.0
