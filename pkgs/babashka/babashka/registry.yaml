@@ -1,0 +1,89 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: babashka
+    repo_name: babashka
+    description: Native, fast starting Clojure interpreter for scripting
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.0.62")
+        asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.2.13")
+        asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.3.2")
+        asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+          - goos: windows
+            format: zip
+      - version_constraint: semver("<= 0.8.2")
+        asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}-static.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 0.10.163")
+        asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}-static.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements: {}
+      - version_constraint: "true"
+        asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}-static.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          arm64: aarch64
+          darwin: macos
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+        overrides:
+          - goos: darwin
+            asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: babashka-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements: {}

@@ -1,0 +1,12 @@
+packages:
+  - name: babashka/babashka@v1.12.206
+  - name: babashka/babashka
+    version: v0.10.163
+  - name: babashka/babashka
+    version: v0.8.2
+  - name: babashka/babashka
+    version: v0.3.2
+  - name: babashka/babashka
+    version: v0.2.13
+  - name: babashka/babashka
+    version: v0.0.62
