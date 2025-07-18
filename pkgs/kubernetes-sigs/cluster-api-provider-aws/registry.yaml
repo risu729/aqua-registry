@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: kubernetes-sigs
+    repo_name: cluster-api-provider-aws
+    description: Kubernetes Cluster API Provider AWS provides consistent deployment and day 2 operations of "self-managed" and EKS Kubernetes clusters on AWS
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.7.0-alpha.0"
+        asset: clusterawsadm-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.3.9")
+        asset: clusterctl-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.6.7")
+        asset: clusterawsadm-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.6.9")
+        asset: clusterawsadm-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 1.5.5")
+        asset: clusterawsadm-{{.OS}}-{{.Arch}}
+        format: raw
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.4.1")
+        asset: clusterawsadm-{{.OS}}-{{.Arch}}
+        format: raw
+      - version_constraint: "true"
+        asset: clusterawsadm-{{.OS}}-{{.Arch}}
+        format: raw
+        checksum:
+          type: github_release
+          asset: cluster-api-provider-aws_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
