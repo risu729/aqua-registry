@@ -1,0 +1,18 @@
+packages:
+  - name: tus/tusd@v2.8.0
+  - name: tus/tusd
+    version: v2.0.0-rc6
+  - name: tus/tusd
+    version: v2.0.0-rc4
+  - name: tus/tusd
+    version: v2.0.0-rc21
+  - name: tus/tusd
+    version: v2.0.0-rc1
+  - name: tus/tusd
+    version: v1.7.3
+  - name: tus/tusd
+    version: v1.6.0
+  - name: tus/tusd
+    version: 0.13.3
+  - name: tus/tusd
+    version: 0.13.0

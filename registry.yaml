@@ -75532,6 +75532,110 @@ packages:
           - linux
           - darwin
   - type: github_release
+    repo_owner: tus
+    repo_name: tusd
+    description: "Reference server implementation in Go of tus: the open protocol for resumable file uploads"
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["0.7.0", "0.13.1", "0.14.0", "v1.7.0", "v2.7.0"]
+        no_asset: true
+      - version_constraint: Version in ["v2.0.0-rc1", "v2.0.0-rc2"]
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: semver("<= 0.13.0")
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: semver("<= 0.13.3")
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 1.6.0")
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: semver("<= 1.7.3")
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: semver("<= 2.0.0-rc21")
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: semver("<= 2.0.0-rc4")
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: semver("<= 2.0.0-rc6")
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: "true"
+        asset: tusd_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            format: tar.gz
+  - type: github_release
     repo_owner: tweag
     repo_name: nickel
     description: Better configuration for less
