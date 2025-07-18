@@ -1,0 +1,12 @@
+packages:
+  - name: coredns/coredns@v011
+  - name: coredns/coredns
+    version: v1.12.2
+  - name: coredns/coredns
+    version: v1.10.0
+  - name: coredns/coredns
+    version: v1.2.2
+  - name: coredns/coredns
+    version: v0.9.10
+  - name: coredns/coredns
+    version: v0.9.9
