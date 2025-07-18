@@ -1,0 +1,20 @@
+packages:
+  - name: mongodb-js/mongosh@v2.5.6
+  - name: mongodb-js/mongosh
+    version: v1.10.3
+  - name: mongodb-js/mongosh
+    version: v1.4.2
+  - name: mongodb-js/mongosh
+    version: v1.1.7
+  - name: mongodb-js/mongosh
+    version: v0.13.1
+  - name: mongodb-js/mongosh
+    version: v0.12.1
+  - name: mongodb-js/mongosh
+    version: v0.0.4
+  - name: mongodb-js/mongosh
+    version: v0.0.3
+  - name: mongodb-js/mongosh
+    version: 0.0.2
+  - name: mongodb-js/mongosh
+    version: v0.0.1-alpha.16

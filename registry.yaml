@@ -52542,6 +52542,109 @@ packages:
         format: raw
         windows_arm_emulation: true
         complete_windows_ext: false
+  - type: github_release
+    repo_owner: mongodb-js
+    repo_name: mongosh
+    description: The MongoDB Shell
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.0.1-alpha.15"
+        no_asset: true
+      - version_constraint: Version in ["v0.0.1-alpha.16", "v0.7.6"]
+        asset: mongosh-{{trimV .Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        supported_envs:
+          - darwin
+      - version_constraint: Version == "0.0.2"
+        asset: mongosh-{{.Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        supported_envs:
+          - darwin
+      - version_constraint: Version == "v0.0.3"
+        asset: mongosh-{{trimV .Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        overrides:
+          - goos: linux
+            format: tgz
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v0.0.4"
+        asset: mongosh-{{trimV .Version}}-{{.OS}}.{{.Format}}
+        format: tgz
+        overrides:
+          - goos: darwin
+            format: zip
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.12.1")
+        asset: mongosh-{{trimV .Version}}-{{.OS}}.{{.Format}}
+        format: zip
+        overrides:
+          - goos: linux
+            format: tgz
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.13.1")
+        asset: mongosh-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        overrides:
+          - goos: linux
+            format: tgz
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 1.1.7")
+        asset: mongosh-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        replacements:
+          amd64: x64
+        overrides:
+          - goos: linux
+            format: tgz
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 1.4.2")
+        asset: mongosh-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        replacements:
+          amd64: x64
+        overrides:
+          - goos: darwin
+            format: zip
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 1.10.3")
+        asset: mongosh-{{trimV .Version}}-{{.OS}}-{{.Arch}}-openssl11.{{.Format}}
+        format: tgz
+        replacements:
+          amd64: x64
+        overrides:
+          - goos: darwin
+            format: zip
+            asset: mongosh-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: mongosh-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        replacements:
+          amd64: x64
+        overrides:
+          - goos: linux
+            format: tgz
+            asset: mongosh-{{trimV .Version}}-{{.OS}}-{{.Arch}}-openssl11.{{.Format}}
+        supported_envs:
+          - linux
+          - darwin
   - name: mongodb/mongodb-atlas-cli/atlascli
     type: github_release
     repo_owner: mongodb
