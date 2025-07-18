@@ -1,0 +1,8 @@
+packages:
+  - name: jckuester/awsweeper@v0.12.0
+  - name: jckuester/awsweeper
+    version: v0.11.1
+  - name: jckuester/awsweeper
+    version: v0.10.2
+  - name: jckuester/awsweeper
+    version: v0.4.1
