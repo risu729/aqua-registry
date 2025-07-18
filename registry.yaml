@@ -23055,6 +23055,236 @@ packages:
       - darwin
       - amd64
   - type: github_release
+    repo_owner: coursier
+    repo_name: coursier
+    description: Pure Scala Artifact Fetching
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["v1.1.0-M14-2", "v2.0.0-RC2-5", "v2.0.0-RC5-5", "v2.0.1"]
+        no_asset: true
+      - version_constraint: Version == "pants_release_1.5.x"
+      - version_constraint: Version == "v2.0.0-RC2-6"
+      - version_constraint: Version == "v2.0.0-RC5"
+      - version_constraint: Version in ["v2.0.8", "v2.0.16"]
+        asset: cs-{{.Arch}}-pc-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: cs-{{.Arch}}-{{.OS}}
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: Version == "v2.0.9"
+        asset: cs-{{.Arch}}-pc-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: darwin
+            asset: cs-{{.Arch}}-{{.OS}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v2.1.25-M2"
+        asset: cs-{{.Arch}}-pc-{{.OS}}-container.{{.Format}}
+        format: gz
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: apple-darwin
+        overrides:
+          - goos: darwin
+            format: zip
+            asset: cs-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 1.1.0-M1")
+        no_asset: true
+      - version_constraint: semver("<= 1.1.0-M14-7")
+      - version_constraint: semver("<= 1.1.0-M8")
+        no_asset: true
+      - version_constraint: semver("<= 2.0.0-RC2-4")
+      - version_constraint: semver("<= 2.0.0-RC6-24")
+        asset: cs-{{.Arch}}-pc-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: darwin
+            asset: cs-{{.Arch}}-{{.OS}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 2.0.0-RC6-26")
+      - version_constraint: semver("<= 2.0.7")
+        asset: cs-{{.Arch}}-pc-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: darwin
+            asset: cs-{{.Arch}}-{{.OS}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 2.0.15")
+        asset: cs-{{.Arch}}-pc-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: cs-{{.Arch}}-{{.OS}}
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.1.0-RC3")
+        asset: cs-{{.Arch}}-pc-{{.OS}}.{{.Format}}
+        format: gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: cs-{{.Arch}}-{{.OS}}.{{.Format}}
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.1.0-RC4")
+        asset: cs-{{.Arch}}-{{.OS}}.{{.Format}}
+        format: gz
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            goarch: amd64
+            asset: cs-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+          - goos: linux
+            goarch: arm64
+            asset: cs-{{.Arch}}-pc-{{.OS}}.{{.Format}}
+            replacements:
+              arm64: aarch64
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.1.1")
+        asset: cs-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            format: gz
+            asset: cs-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 2.1.15")
+        asset: cs-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            format: gz
+            asset: cs-{{.Arch}}-pc-{{.OS}}-container.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 2.1.25-M1")
+        asset: cs-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        format: zip
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            format: gz
+            asset: cs-{{.Arch}}-pc-{{.OS}}-container.{{.Format}}
+          - goos: darwin
+            replacements:
+              arm64: aarch64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 2.1.25-M16")
+        asset: cs-{{.Arch}}-pc-{{.OS}}-compat.{{.Format}}
+        format: gz
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: cs-{{.Arch}}-pc-{{.OS}}-container.{{.Format}}
+          - goos: darwin
+            format: zip
+            asset: cs-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.1.25-M5")
+        asset: cs-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        format: zip
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            format: gz
+            asset: cs-{{.Arch}}-pc-{{.OS}}-container.{{.Format}}
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: cs-{{.Arch}}-pc-{{.OS}}-compat.{{.Format}}
+        format: gz
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: cs-{{.Arch}}-pc-{{.OS}}-container.{{.Format}}
+          - goos: darwin
+            format: zip
+            asset: cs-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        supported_envs:
+          - linux
+          - darwin
+  - type: github_release
     repo_owner: cpisciotta
     repo_name: xcbeautify
     description: A little beautifier tool for xcodebuild

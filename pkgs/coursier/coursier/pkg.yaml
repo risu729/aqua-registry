@@ -1,0 +1,40 @@
+packages:
+  - name: coursier/coursier@v2.1.25-M9
+  - name: coursier/coursier
+    version: v2.1.25-M5
+  - name: coursier/coursier
+    version: v2.1.25-M2
+  - name: coursier/coursier
+    version: v2.1.25-M16
+  - name: coursier/coursier
+    version: v2.1.25-M1
+  - name: coursier/coursier
+    version: v2.1.15
+  - name: coursier/coursier
+    version: v2.1.1
+  - name: coursier/coursier
+    version: v2.1.0-RC4
+  - name: coursier/coursier
+    version: v2.1.0-RC3
+  - name: coursier/coursier
+    version: v2.0.15
+  - name: coursier/coursier
+    version: v2.0.9
+  - name: coursier/coursier
+    version: v2.0.8
+  - name: coursier/coursier
+    version: v2.0.7
+  - name: coursier/coursier
+    version: v2.0.0-RC6-26
+  - name: coursier/coursier
+    version: v2.0.0-RC6-24
+  - name: coursier/coursier
+    version: v2.0.0-RC5
+  - name: coursier/coursier
+    version: v2.0.0-RC2-6
+  - name: coursier/coursier
+    version: v2.0.0-RC2-4
+  - name: coursier/coursier
+    version: v1.1.0-M14-7
+  - name: coursier/coursier
+    version: pants_release_1.5.x
