@@ -74316,6 +74316,71 @@ packages:
       - name: tinygo
         src: tinygo/bin/tinygo
   - type: github_release
+    repo_owner: titan-data
+    repo_name: titan
+    description: Titan is an open source project for developers to manage their data like code
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.3.1")
+        asset: titan-cli-{{.Version}}-{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.3.5")
+        asset: titan-cli-{{.Version}}-{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        overrides:
+          - goos: linux
+            format: tar
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.4.1")
+        asset: titan-cli-{{.Version}}-{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar
+        rosetta2: true
+        overrides:
+          - goos: darwin
+            format: zip
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.5.3")
+        asset: titan-cli-{{.Version}}-{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        overrides:
+          - goos: linux
+            format: tar
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.5")
+        asset: titan-cli-{{.Version}}-{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        overrides:
+          - goos: linux
+            format: tar
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: titan-cli-{{.Version}}-{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        overrides:
+          - goos: linux
+            format: tar
+  - type: github_release
     repo_owner: tkuchiki
     repo_name: alp
     description: Access Log Profiler
