@@ -1,0 +1,26 @@
+packages:
+  - name: moul/assh@v2.16.0
+  - name: moul/assh
+    version: v2.15.0
+  - name: moul/assh
+    version: v2.11.0
+  - name: moul/assh
+    version: v2.9.1
+  - name: moul/assh
+    version: v2.8.0
+  - name: moul/assh
+    version: v2.6.0
+  - name: moul/assh
+    version: v2.5.0
+  - name: moul/assh
+    version: v2.4.1
+  - name: moul/assh
+    version: v2.2.0
+  - name: moul/assh
+    version: v2.1.0
+  - name: moul/assh
+    version: v1.1.0
+  - name: moul/assh
+    version: v0.16.0
+  - name: moul/assh
+    version: v0.15.1

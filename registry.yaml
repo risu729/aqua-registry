@@ -52852,6 +52852,128 @@ packages:
             files:
               - name: proto
   - type: github_release
+    repo_owner: moul
+    repo_name: assh
+    description: ":computer: make your ssh client smarter"
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["v0.0.0-poc", "v2.9.0"]
+        no_asset: true
+      - version_constraint: Version == "v0.15.1"
+      - version_constraint: Version == "v0.16.0"
+        asset: advanced-ssh-config-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v2.2.0"
+        asset: assh_{{trimV .Version}}_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2.5.0"
+        asset: assh_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: Version == "v2.6.0"
+        asset: assh_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        replacements:
+          arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: Version == "v2.9.1"
+        asset: assh_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+      - version_constraint: Version in ["v2.11.0", "v2.11.3"]
+        asset: assh_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+      - version_constraint: semver("<= 1.1.0")
+        asset: advanced-ssh-config-{{trimV .Version}}.{{.OS}}-10.10-intel.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macosx
+          linux: Linux
+        overrides:
+          - goos: linux
+            format: raw
+            asset: assh-{{.OS}}-{{.Arch}}
+            replacements:
+              amd64: x86_64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 2.1.0")
+        asset: assh_{{trimV .Version}}_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 2.4.1")
+        asset: assh_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: semver("<= 2.8.0")
+        asset: assh_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+      - version_constraint: semver("<= 2.12.1")
+        no_asset: true
+      - version_constraint: semver("<= 2.15.0")
+        asset: assh_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: assh_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: assh_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: assh_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+  - type: github_release
     repo_owner: mozilla
     repo_name: grcov
     description: Rust tool to collect and aggregate code coverage data for multiple source files
