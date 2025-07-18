@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: kubevela
+    repo_name: velad
+    description: Lightweight KubeVela that runs as Daemon in single node with high availability
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v1.4.4"
+        no_asset: true
+      - version_constraint: Version == "v1.3.0-alpha.1"
+      - version_constraint: semver("<= 1.3.1")
+        asset: velad-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        supported_envs:
+          - linux/amd64
+      - version_constraint: semver("<= 1.4.6")
+        asset: velad-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.4.12")
+        asset: velad-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+      - version_constraint: semver("<= 1.5.0-alpha.3")
+        asset: velad-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: velad-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
