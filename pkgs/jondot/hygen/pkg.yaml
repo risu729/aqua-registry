@@ -1,0 +1,10 @@
+packages:
+  - name: jondot/hygen@v6.2.11
+  - name: jondot/hygen
+    version: v6.0.2
+  - name: jondot/hygen
+    version: v4.0.10
+  - name: jondot/hygen
+    version: v4.0.3
+  - name: jondot/hygen
+    version: v2.1.0

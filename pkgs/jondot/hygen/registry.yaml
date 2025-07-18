@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: jondot
+    repo_name: hygen
+    description: The simple, fast, and scalable code generator that lives in your project
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v4.0.3"
+        asset: hygen.{{.OS}}.v4.0.2.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+            asset: hygen.{{.OS}}.exe.v4.0.2.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v4.0.10"
+        asset: hygen.{{.OS}}.v4.0.9.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+            asset: hygen.{{.OS}}.exe.v4.0.9.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v6.0.2"
+        asset: hygen-{{.OS}}
+        format: raw
+        replacements:
+          windows: win
+        supported_envs:
+          - linux/amd64
+          - windows/amd64
+      - version_constraint: semver("<= 2.1.0")
+        asset: hygen.{{.OS}}.{{.Version}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win
+        overrides:
+          - goos: windows
+            asset: hygen.{{.OS}}.exe.{{.Version}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: hygen.{{.OS}}.{{.Version}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win
+        overrides:
+          - goos: windows
+            format: zip
+            asset: hygen.{{.OS}}.exe.{{.Version}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
