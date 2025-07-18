@@ -1,0 +1,6 @@
+packages:
+  - name: tursodatabase/libsql@libsql-server-v0.24.32
+  - name: tursodatabase/libsql
+    version: libsql-server-v0.24.5
+  - name: tursodatabase/libsql
+    version: v0.2.2

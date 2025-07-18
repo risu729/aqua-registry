@@ -75532,6 +75532,46 @@ packages:
           - linux
           - darwin
   - type: github_release
+    repo_owner: tursodatabase
+    repo_name: libsql
+    description: libSQL is a fork of SQLite that is both Open Source, and Open Contributions
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.2.2")
+      - version_constraint: semver("<= 0.24.5")
+        asset: libsql-server-{{.Arch}}-{{.OS}}.{{.Format}}
+        format: tar.xz
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+          linux: unknown-linux-gnu
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+        overrides:
+          - goos: darwin
+            replacements:
+              arm64: aarch64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: "true"
+        asset: libsql-server-{{.Arch}}-{{.OS}}.{{.Format}}
+        format: tar.xz
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: apple-darwin
+          linux: unknown-linux-gnu
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+  - type: github_release
     repo_owner: tweag
     repo_name: nickel
     description: Better configuration for less
