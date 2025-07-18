@@ -1,0 +1,74 @@
+packages:
+  - name: GAM-team/GAM@20240924.214312
+  - name: GAM-team/GAM
+    version: "20221101.195551"
+  - name: GAM-team/GAM
+    version: v7.14.00
+  - name: GAM-team/GAM
+    version: v7.07.14
+  - name: GAM-team/GAM
+    version: v7.07.13
+  - name: GAM-team/GAM
+    version: v7.07.12
+  - name: GAM-team/GAM
+    version: v7.06.05
+  - name: GAM-team/GAM
+    version: v7.05.09
+  - name: GAM-team/GAM
+    version: v7.02.08
+  - name: GAM-team/GAM
+    version: v7.00.38
+  - name: GAM-team/GAM
+    version: v7.00.10
+  - name: GAM-team/GAM
+    version: v7.0.0
+  - name: GAM-team/GAM
+    version: v6.58
+  - name: GAM-team/GAM
+    version: v6.31
+  - name: GAM-team/GAM
+    version: v6.25
+  - name: GAM-team/GAM
+    version: v6.21
+  - name: GAM-team/GAM
+    version: v6.16
+  - name: GAM-team/GAM
+    version: v6.13
+  - name: GAM-team/GAM
+    version: v6.11
+  - name: GAM-team/GAM
+    version: v6.07
+  - name: GAM-team/GAM
+    version: v6.06
+  - name: GAM-team/GAM
+    version: v6.5
+  - name: GAM-team/GAM
+    version: v5.24
+  - name: GAM-team/GAM
+    version: v5.02
+  - name: GAM-team/GAM
+    version: v5.0
+  - name: GAM-team/GAM
+    version: v4.99
+  - name: GAM-team/GAM
+    version: v4.95
+  - name: GAM-team/GAM
+    version: v4.94
+  - name: GAM-team/GAM
+    version: v4.80
+  - name: GAM-team/GAM
+    version: v4.72
+  - name: GAM-team/GAM
+    version: v4.70
+  - name: GAM-team/GAM
+    version: v4.65
+  - name: GAM-team/GAM
+    version: v4.61
+  - name: GAM-team/GAM
+    version: v4.01
+  - name: GAM-team/GAM
+    version: v3.65
+  - name: GAM-team/GAM
+    version: v3.43a
+  - name: GAM-team/GAM
+    version: v3.8

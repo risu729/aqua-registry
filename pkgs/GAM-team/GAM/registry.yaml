@@ -1,0 +1,621 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: GAM-team
+    repo_name: GAM
+    description: command line management for Google Workspace
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v3.43"
+        no_asset: true
+      - version_constraint: Version == "v3.8"
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x86_64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}.{{.Format}}
+          - goos: windows
+            format: zip
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v3.43a"
+        asset: gam-3.43-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - windows/amd64
+      - version_constraint: Version == "v4.01"
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x86_64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}.{{.Format}}
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v4.65"
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x86_64
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}.{{.Format}}
+          - goos: windows
+            format: zip
+            replacements:
+              amd64: x64
+      - version_constraint: Version == "v4.70"
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x86_64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}.{{.Format}}
+          - goos: windows
+            format: zip
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v4.80"
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-legacy.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v4.95"
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.15.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-MacOS10.12.6.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v5.0"
+        asset: gam-{{trimV .Version}}0-{{.OS}}-{{.Arch}}-glibc2.15.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: gam-{{trimV .Version}}0-{{.OS}}-{{.Arch}}-glibc2.23.{{.Format}}
+          - goos: darwin
+            asset: gam-{{trimV .Version}}0-{{.OS}}-{{.Arch}}-MacOS10.12.6.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}0-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: Version == "v6.5"
+        asset: gam-{{trimV .Version}}0-{{.OS}}-{{.Arch}}-legacy.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}0-{{.OS}}-universal2.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}0-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: Version == "v6.07"
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.23.{{.Format}}
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v6.31"
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.31.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: amd64
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+          - goos: linux
+            goarch: arm64
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-universal2.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: Version == "v7.0.0"
+        asset: gam-7.00.00-{{.OS}}-{{.Arch}}-glibc2.31.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-7.00.00-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-7.00.00-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: Version == "v7.07.13"
+        asset: gam-{{trimV .Version}}-{{.OS}}13.7-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}14.7-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: Version == "v7.07.14"
+        asset: gam-{{trimV .Version}}-{{.OS}}14.7-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+          - goos: darwin
+            goarch: amd64
+            asset: gam-{{trimV .Version}}-{{.OS}}13.7-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: Version == "20221101.195551"
+        asset: gam-6.30-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: gam-6.30-{{.OS}}-{{.Arch}}-glibc2.31.{{.Format}}
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-6.30-{{.OS}}-universal2.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-6.30-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 3.65.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 4.61.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              amd64: x86_64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}.{{.Format}}
+          - goos: windows
+            format: zip
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 4.72.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 4.94.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.15.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 4.99.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-MacOS10.12.6.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: amd64
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.15.{{.Format}}
+          - goos: linux
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.23.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 5.2.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.15.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.23.{{.Format}}
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-MacOS10.12.6.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 5.24.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.23.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-MacOS10.13.6.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 6.6.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.23.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 6.11.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-universal2.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.27.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 6.13.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.27.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.28.{{.Format}}
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-universal2.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 6.16.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.31.{{.Format}}
+        format: tar.xz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.28.{{.Format}}
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 6.21.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.31.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.28.{{.Format}}
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-universal2.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 6.25.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-universal2.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 6.58.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.31.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-universal2.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 7.0.10")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.31.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements: {}
+      - version_constraint: semver("<= 7.0.38")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements: {}
+      - version_constraint: semver("<= 7.2.8")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            goarch: amd64
+            asset: gam-{{trimV .Version}}-{{.OS}}13.7-{{.Arch}}.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}14.7-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements: {}
+      - version_constraint: semver("<= 7.5.9")
+        asset: gam-{{trimV .Version}}-{{.OS}}14.7-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+          - goos: darwin
+            goarch: amd64
+            asset: gam-{{trimV .Version}}-{{.OS}}13.7-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements: {}
+      - version_constraint: semver("<= 7.6.5")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            goarch: amd64
+            asset: gam-{{trimV .Version}}-{{.OS}}13.7-{{.Arch}}.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}14.7-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements: {}
+      - version_constraint: semver("<= 7.7.12")
+        asset: gam-{{trimV .Version}}-{{.OS}}14.7-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+          - goos: darwin
+            goarch: amd64
+            asset: gam-{{trimV .Version}}-{{.OS}}13.7-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 7.14.0")
+        asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}-glibc2.35.{{.Format}}
+        format: tar.xz
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            goarch: amd64
+            asset: gam-{{trimV .Version}}-{{.OS}}13.7-{{.Arch}}.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: gam-{{trimV .Version}}-{{.OS}}14.7-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: "true"
+        asset: gam-7.00.06-{{.OS}}-{{.Arch}}-glibc2.31.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            asset: gam-7.00.06-{{.OS}}-{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+            asset: gam-7.00.06-{{.OS}}-{{.Arch}}.{{.Format}}
+            replacements: {}
