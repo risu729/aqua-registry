@@ -1,0 +1,14 @@
+packages:
+  - name: VirtusLab/scala-cli@v1.8.4
+  - name: VirtusLab/scala-cli
+    version: v1.5.1
+  - name: VirtusLab/scala-cli
+    version: v0.1.19
+  - name: VirtusLab/scala-cli
+    version: v0.1.18
+  - name: VirtusLab/scala-cli
+    version: v0.1.15
+  - name: VirtusLab/scala-cli
+    version: v0.1.14
+  - name: VirtusLab/scala-cli
+    version: v0.1.0

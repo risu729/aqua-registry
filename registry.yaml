@@ -6537,6 +6537,165 @@ packages:
               - name: vmalert-tool
                 src: vmalert-tool-windows-{{.Arch}}-prod.exe
   - type: github_release
+    repo_owner: VirtusLab
+    repo_name: scala-cli
+    description: Scala CLI is a command-line tool to interact with the Scala language. It lets you compile, run, test, and package your Scala code (and more!)
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v1.5.2"
+        no_asset: true
+      - version_constraint: Version == "v0.1.15"
+        asset: scala-cli-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+        format: gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: darwin
+            goarch: amd64
+            format: zip
+            asset: scala-cli-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: scala-cli-{{.Arch}}-{{.OS}}.{{.Format}}
+            replacements:
+              arm64: aarch64
+          - goos: windows
+            format: raw
+            asset: vc_redist.{{.Arch}}
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v0.1.19"
+        asset: scala-cli-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+        format: gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: scala-cli-{{.Arch}}-pc-{{.OS}}.{{.Format}}
+          - goos: darwin
+            format: zip
+            asset: scala-cli-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+          - goos: windows
+            format: raw
+            asset: vc_redist.{{.Arch}}
+            replacements:
+              amd64: x64
+      - version_constraint: semver("<= 0.1.0")
+        asset: scala-cli-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+        format: gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: darwin
+            asset: scala-cli-{{.Arch}}-{{.OS}}.{{.Format}}
+          - goos: windows
+            format: raw
+            asset: vc_redist.{{.Arch}}
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.1.14")
+        asset: scala-cli-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            format: gz
+            asset: scala-cli-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+          - goos: windows
+            format: raw
+            asset: vc_redist.{{.Arch}}
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.1.18")
+        asset: scala-cli-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            format: gz
+            asset: scala-cli-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+          - goos: darwin
+            replacements:
+              arm64: aarch64
+          - goos: windows
+            format: raw
+            asset: vc_redist.{{.Arch}}
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.5.1")
+        asset: scala-cli-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            goarch: amd64
+            format: gz
+            asset: scala-cli-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+          - goos: linux
+            goarch: arm64
+            asset: scala-cli-{{.Arch}}-pc-{{.OS}}-static-sdk.{{.Format}}
+          - goos: windows
+            format: raw
+            asset: vc_redist.{{.Arch}}
+            replacements:
+              amd64: x64
+      - version_constraint: "true"
+        asset: scala-cli-{{.Arch}}-pc-{{.OS}}-static-sdk.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: apple-darwin
+        overrides:
+          - goos: linux
+            goarch: amd64
+            format: gz
+            asset: scala-cli-{{.Arch}}-pc-{{.OS}}-mostly-static.{{.Format}}
+          - goos: darwin
+            asset: scala-cli-{{.Arch}}-{{.OS}}-sdk.{{.Format}}
+          - goos: windows
+            format: raw
+            asset: vc_redist.{{.Arch}}
+            replacements:
+              amd64: x64
+  - type: github_release
     repo_owner: WebAssembly
     repo_name: binaryen
     description: Optimizer and compiler/toolchain library for WebAssembly
