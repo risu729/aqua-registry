@@ -1,0 +1,4 @@
+packages:
+  - name: transifex/cli@v1.6.17
+  - name: transifex/cli
+    version: v0.0.1

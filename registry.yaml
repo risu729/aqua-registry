@@ -75086,6 +75086,41 @@ packages:
           type: github_release
           asset: SHA512SUMS
           algorithm: sha512
+  - type: github_release
+    repo_owner: transifex
+    repo_name: cli
+    description: The Transifex command-line client
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.0.1"
+        asset: tx-client_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: darwin
+            asset: tx-client_{{trimV .Version}}_{{.OS}}MacOs_{{.Arch}}.{{.Format}}
+          - goos: windows
+            format: zip
+      - version_constraint: "true"
+        asset: tx-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
   - type: github_content
     repo_owner: travis-ci
     repo_name: gimme
