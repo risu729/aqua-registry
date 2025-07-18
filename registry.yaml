@@ -4361,6 +4361,130 @@ packages:
           amd64: x64
           windows: win32
   - type: github_release
+    repo_owner: MystenLabs
+    repo_name: sui
+    description: Sui, a next-generation smart contract platform with high throughput, low latency, and an asset-oriented programming model powered by the Move programming language
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["mainnet-v1.2.0", "testnet-v1.28.0"]
+        no_asset: true
+      - version_constraint: Version == "devnet-0.6.0"
+      - version_constraint: Version == "devnet-0.13.0"
+        asset: sui-{{.OS}}-{{.Arch}}
+        format: raw
+        replacements:
+          amd64: x86_64
+        supported_envs:
+          - linux/amd64
+      - version_constraint: Version == "mainnet-v1.8.2"
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version in ["devnet-v1.9.0", "testnet-v1.9.1", "testnet-v1.32.1"]
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "testnet-v1.17.1"
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin/arm64
+      - version_constraint: Version in ["testnet-v1.17.2", "devnet-v1.24.0"]
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+      - version_constraint: Version == "testnet-v1.43.0"
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements:
+              amd64: x86_64
+        supported_envs:
+          - darwin/arm64
+          - windows/amd64
+      - version_constraint: Version == "mainnet-v1.49.2"
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+      - version_constraint: semver("<= 0.12.2")
+        no_asset: true
+      - version_constraint: semver("<= 1.5.0")
+      - version_constraint: semver("<= 1.6.3")
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 1.7.0")
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 1.7.1")
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 1.8.2")
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: "true"
+        asset: sui-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+  - type: github_release
     repo_owner: NathanBaulch
     repo_name: rainbow-roads
     description: Animate your exercise maps
