@@ -1,0 +1,4 @@
+packages:
+  - name: opensearch-project/opensearch-cli@v1.2.0
+  - name: opensearch-project/opensearch-cli
+    version: 1.1.0

@@ -56955,6 +56955,32 @@ packages:
           type: github_release
           asset: fga.intoto.jsonl
   - type: github_release
+    repo_owner: opensearch-project
+    repo_name: opensearch-cli
+    description: A full-featured command line interface (CLI) for OpenSearch
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 1.1.0")
+        asset: opensearch-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            format: pkg
+      - version_constraint: "true"
+        asset: opensearch-cli-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macos
+        overrides:
+          - goos: darwin
+            format: pkg
+  - type: github_release
     repo_owner: openshift-online
     repo_name: ocm-cli
     description: CLI for the Red Hat OpenShift Cluster Manager
