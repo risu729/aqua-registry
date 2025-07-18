@@ -1,0 +1,2 @@
+packages:
+  - name: opsgenie/opsgenie-lamp@v3.1.4
