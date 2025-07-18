@@ -1,0 +1,10 @@
+packages:
+  - name: allure-framework/allurectl@2.17.0
+  - name: allure-framework/allurectl
+    version: 2.0.0
+  - name: allure-framework/allurectl
+    version: 1.20.0
+  - name: allure-framework/allurectl
+    version: 1.20.0-rc2
+  - name: allure-framework/allurectl
+    version: 1.19.3

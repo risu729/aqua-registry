@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: allure-framework
+    repo_name: allurectl
+    description: Allure TestOps Command line tool
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "1.20.0"
+        asset: allurectl_{{.OS}}_{{.Arch}}
+        format: raw
+        supported_envs:
+          - linux
+          - windows
+      - version_constraint: semver("<= 1.19.3")
+        asset: allurectl_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.20.0-rc2")
+        asset: allurectl_{{.OS}}_{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+        supported_envs:
+          - linux/amd64
+          - windows/amd64
+      - version_constraint: semver("<= 2.0.0")
+        asset: allurectl_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+      - version_constraint: "true"
+        asset: allurectl_{{.OS}}_{{.Arch}}
+        format: raw
