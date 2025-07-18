@@ -1,0 +1,571 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: grain-lang
+    repo_name: grain
+    description: The Grain compiler toolchain and CLI. Home of the modern web staple
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.3.0")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.3.0"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "runtime-v0.3.0"
+        no_asset: true
+      - version_constraint: Version == "grain-v0.3.1"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.3.2")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.3.2"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.4.0")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.4.0"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.4.1")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.4.1"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.4.2")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.4.2"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "cli-v0.4.2"
+        no_asset: true
+      - version_constraint: Version == "stdlib-v0.4.2"
+      - version_constraint: Version == "cli-v0.4.3"
+        no_asset: true
+      - version_constraint: Version == "grain-v0.4.3"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "@grain/compiler-v0.4.3"
+        no_asset: true
+      - version_constraint: semver("<= 0.4.4")
+      - version_constraint: Version == "cli-v0.4.4"
+        no_asset: true
+      - version_constraint: Version == "grain-v0.4.4"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "@grain/compiler-v0.4.4"
+        no_asset: true
+      - version_constraint: Version == "grain-v0.4.5"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.4.5"
+      - version_constraint: semver("<= 0.4.6")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.4.6"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "cli-v0.4.6"
+        no_asset: true
+      - version_constraint: Version == "stdlib-v0.4.6"
+      - version_constraint: Version == "cli-v0.4.7"
+        no_asset: true
+      - version_constraint: Version == "grain-v0.4.7"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.5.0"
+      - version_constraint: semver("<= 0.5.0")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.0"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.1")
+      - version_constraint: Version == "compiler-v0.5.1"
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.1"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "cli-v0.5.1"
+        no_asset: true
+      - version_constraint: semver("<= 0.5.2")
+      - version_constraint: semver("<= 0.5.2")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.2"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "js-runner-v0.5.2"
+      - version_constraint: Version == "grain-v0.5.3"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.5.3"
+      - version_constraint: semver("<= 0.5.3")
+        no_asset: true
+      - version_constraint: Version == "js-runner-v0.5.3"
+      - version_constraint: semver("<= 0.5.4")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.4"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.4")
+      - version_constraint: Version == "grain-v0.5.5"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.5.5"
+      - version_constraint: Version == "cli-v0.5.5"
+        no_asset: true
+      - version_constraint: Version == "js-runner-v0.5.5"
+      - version_constraint: Version == "compiler-v0.5.5"
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.6"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.6")
+        no_asset: true
+      - version_constraint: Version == "js-runner-v0.5.6"
+      - version_constraint: Version == "preview"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.5.6"
+      - version_constraint: semver("<= 0.5.7")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.7"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.7")
+      - version_constraint: semver("<= 0.5.8")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.8"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.8")
+      - version_constraint: semver("<= 0.5.9")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.9"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.9")
+      - version_constraint: semver("<= 0.5.10")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.10"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.10")
+      - version_constraint: semver("<= 0.5.11")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.11"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.11")
+      - version_constraint: semver("<= 0.5.12")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.12"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.12")
+      - version_constraint: semver("<= 0.5.13")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.5.13"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 0.5.13")
+      - version_constraint: semver("<= 0.6.0")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.6.0"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.6.0"
+      - version_constraint: semver("<= 0.6.1")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.6.1"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.6.1"
+      - version_constraint: semver("<= 0.6.2")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.6.2"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.6.2"
+      - version_constraint: semver("<= 0.6.3")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.6.3"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.6.3"
+      - version_constraint: semver("<= 0.6.4")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.6.4"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.6.4"
+      - version_constraint: semver("<= 0.6.5")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.6.5"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.6.5"
+      - version_constraint: semver("<= 0.6.6")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.6.6"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.6.6"
+      - version_constraint: semver("<= 0.7.0")
+        no_asset: true
+      - version_constraint: Version == "grain-v0.7.0"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "stdlib-v0.7.0"
+      - version_constraint: Version == "cli-v0.7.1"
+        no_asset: true
+      - version_constraint: "true"
+        asset: grain-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: mac
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
