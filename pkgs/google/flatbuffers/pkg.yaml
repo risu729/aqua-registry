@@ -1,0 +1,20 @@
+packages:
+  - name: google/flatbuffers@v25.2.10
+  - name: google/flatbuffers
+    version: v24.3.25
+  - name: google/flatbuffers
+    version: v24.3.7
+  - name: google/flatbuffers
+    version: v23.5.26
+  - name: google/flatbuffers
+    version: v22.10.26
+  - name: google/flatbuffers
+    version: v22.9.24
+  - name: google/flatbuffers
+    version: v2.0.7
+  - name: google/flatbuffers
+    version: v2.0.0
+  - name: google/flatbuffers
+    version: v1.12.0
+  - name: google/flatbuffers
+    version: v1.11.0

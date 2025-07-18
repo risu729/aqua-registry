@@ -1,0 +1,143 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: google
+    repo_name: flatbuffers
+    description: "FlatBuffers: Memory Efficient Serialization Library"
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v1.7.1"
+        no_asset: true
+      - version_constraint: Version == "v1.12.0"
+        asset: flatc_{{.OS}}.{{.Format}}
+        format: zip
+        supported_envs:
+          - windows/amd64
+      - version_constraint: Version == "v2.0.0"
+        asset: "{{.OS}}.flatc.binary.{{.Format}}"
+        format: zip
+        replacements:
+          darwin: Mac
+          linux: Linux
+          windows: Windows
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}.flatc.binary.clang++-9.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2.0.7"
+        asset: "{{.OS}}.flatc.binary.{{.Format}}"
+        format: zip
+        replacements:
+          darwin: Mac
+          linux: Linux
+          windows: Windows
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}.flatc.binary.clang++-12.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v24.3.25"
+        asset: "{{.OS}}.flatc.binary.{{.Format}}"
+        format: zip
+        replacements:
+          darwin: Mac
+          linux: Linux
+          windows: Windows
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}.flatc.binary.clang++-15.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 1.0.1")
+        no_asset: true
+      - version_constraint: semver("<= 1.11.0")
+        asset: flatc_{{.OS}}_exe.{{.Format}}
+        format: zip
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 22.9.24")
+        asset: "{{.OS}}.flatc.binary.{{.Format}}"
+        format: zip
+        replacements:
+          darwin: Mac
+          linux: Linux
+          windows: Windows
+        slsa_provenance:
+          type: github_release
+          asset: attestation.intoto.jsonl
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}.flatc.binary.clang++-12.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 22.10.26")
+        asset: "{{.OS}}.flatc.binary.{{.Format}}"
+        format: zip
+        replacements:
+          darwin: Mac
+          linux: Linux
+          windows: Windows
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}.flatc.binary.clang++-12.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 23.5.26")
+        asset: "{{.OS}}.flatc.binary.{{.Format}}"
+        format: zip
+        replacements:
+          darwin: Mac
+          linux: Linux
+          windows: Windows
+        slsa_provenance:
+          type: github_release
+          asset: multiple.intoto.jsonl
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}.flatc.binary.clang++-12.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 24.3.7")
+        asset: "{{.OS}}.flatc.binary.{{.Format}}"
+        format: zip
+        replacements:
+          darwin: Mac
+          linux: Linux
+          windows: Windows
+        slsa_provenance:
+          type: github_release
+          asset: multiple.intoto.jsonl
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}.flatc.binary.clang++-15.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: "{{.OS}}.flatc.binary.{{.Format}}"
+        format: zip
+        replacements:
+          darwin: Mac
+          linux: Linux
+          windows: Windows
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}.flatc.binary.clang++-18.{{.Format}}"
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
