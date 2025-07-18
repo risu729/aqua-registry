@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: soracom
+    repo_name: soracom-cli
+    description: Provides `soracom` command, a command line tool for calling SORACOM APIs. SORACOM API を呼び出すためのコマンドラインツール soracom を提供します。
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.7.1")
+        asset: soracom_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz
+      - version_constraint: "true"
+        asset: soracom_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+        overrides:
+          - goos: linux
+            format: tar.gz

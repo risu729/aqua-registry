@@ -1,0 +1,4 @@
+packages:
+  - name: soracom/soracom-cli@v1.4.0
+  - name: soracom/soracom-cli
+    version: v0.7.1
