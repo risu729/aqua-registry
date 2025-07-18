@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: yt-dlp
+    repo_name: yt-dlp
+    description: A feature-rich command-line audio/video downloader
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "2021.10.22"
+        asset: yt-dlp_{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+          windows: win
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 2021.2.19")
+        asset: youtube-dlc
+        format: raw
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 2021.10.10")
+        asset: yt-dlp
+        format: raw
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 2021.11.10.1")
+        asset: yt-dlp_{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          windows: win
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 2022.5.18")
+        asset: yt-dlp_{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+          windows: win
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 2022.10.4")
+        asset: yt-dlp_{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+          windows: win
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 2024.4.9")
+        asset: yt-dlp_{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+          windows: win
+        overrides:
+          - goos: linux
+            goarch: arm64
+            format: raw
+            asset: yt-dlp_{{.OS}}_{{.Arch}}
+            replacements:
+              arm64: aarch64
+      - version_constraint: "true"
+        asset: yt-dlp_{{.OS}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+          windows: win
+        overrides:
+          - goos: linux
+            goarch: amd64
+            format: raw
+            asset: yt-dlp_{{.OS}}
+          - goos: linux
+            goarch: arm64
+            format: raw
+            asset: yt-dlp_{{.OS}}_{{.Arch}}
+            replacements:
+              arm64: aarch64

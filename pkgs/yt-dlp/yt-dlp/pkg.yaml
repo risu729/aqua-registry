@@ -1,0 +1,16 @@
+packages:
+  - name: yt-dlp/yt-dlp@2025.06.30
+  - name: yt-dlp/yt-dlp
+    version: 2024.04.09
+  - name: yt-dlp/yt-dlp
+    version: 2022.10.04
+  - name: yt-dlp/yt-dlp
+    version: 2022.05.18
+  - name: yt-dlp/yt-dlp
+    version: 2021.11.10.1
+  - name: yt-dlp/yt-dlp
+    version: 2021.10.22
+  - name: yt-dlp/yt-dlp
+    version: 2021.10.10
+  - name: yt-dlp/yt-dlp
+    version: 2021.02.19
