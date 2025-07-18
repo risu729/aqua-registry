@@ -1,0 +1,6 @@
+packages:
+  - name: sigoden/upt@v0.9.0
+  - name: sigoden/upt
+    version: v0.3.0
+  - name: sigoden/upt
+    version: v0.1.3
