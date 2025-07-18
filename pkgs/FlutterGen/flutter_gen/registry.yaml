@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: FlutterGen
+    repo_name: flutter_gen
+    description: The Flutter code generator for your assets, fonts, colors, … — Get rid of all String-based APIs
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: "true"
+        asset: fluttergen-{{.OS}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          darwin: macos
+        checksum:
+          type: github_release
+          asset: fluttergen-{{.OS}}.sha256
+          algorithm: sha256
+        supported_envs:
+          - linux/amd64
+          - darwin
