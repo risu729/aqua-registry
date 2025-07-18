@@ -1,0 +1,10 @@
+packages:
+  - name: solo-io/gloo@v2.0.0-beta1
+  - name: solo-io/gloo
+    version: v1.20.0-beta8
+  - name: solo-io/gloo
+    version: v1.16.22
+  - name: solo-io/gloo
+    version: v1.15.0-beta21
+  - name: solo-io/gloo
+    version: v1.13.39
