@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: ccache
+    repo_name: ccache
+    description: ccache – a fast compiler cache
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 3.7.7")
+      - version_constraint: semver("<= 4.6.0")
+        asset: ccache-{{trimV .Version}}-{{.OS}}-32.{{.Format}}
+        format: zip
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 4.7.5")
+        asset: ccache-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+        overrides:
+          - goos: linux
+            format: tar.xz
+        supported_envs:
+          - linux/amd64
+          - windows/amd64
+      - version_constraint: "true"
+        asset: ccache-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.xz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+        overrides:
+          - goos: darwin
+            format: tar.gz
+            asset: ccache-{{trimV .Version}}-{{.OS}}.{{.Format}}
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
