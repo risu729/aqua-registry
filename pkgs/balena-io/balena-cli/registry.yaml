@@ -1,0 +1,224 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: balena-io
+    repo_name: balena-cli
+    description: The official balena CLI tool
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v6.10.2"
+        asset: resin-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+      - version_constraint: semver("<= 7.10.2")
+        asset: resin-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v7.10.3"
+        asset: resin-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - darwin
+      - version_constraint: semver("<= 8.1.1")
+        asset: resin-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 9.0.1")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v9.0.2"
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - darwin
+      - version_constraint: semver("<= 9.6.0")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v9.7.0"
+        no_asset: true
+      - version_constraint: semver("<= 9.9.1")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v9.9.2"
+        no_asset: true
+      - version_constraint: semver("<= 10.16.0")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v10.17.0"
+        no_asset: true
+      - version_constraint: semver("<= 10.17.6")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: Version == "v11.0.0"
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 11.0.5")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v11.0.6"
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 11.33.2")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 11.34.0")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+        overrides:
+          - goos: windows
+            format: raw
+            asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-installer
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 12.3.8")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v12.3.9"
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        rosetta2: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 16.0.0")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 17.4.6")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+      - version_constraint: semver("<= 17.4.8")
+        no_asset: true
+      - version_constraint: semver("<= 18.0.4")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+      - version_constraint: semver("<= 18.2.10")
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS
+      - version_constraint: Version == "v18.2.11"
+        no_asset: true
+      - version_constraint: "true"
+        asset: balena-cli-{{.Version}}-{{.OS}}-{{.Arch}}-standalone.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          amd64: x64
+          darwin: macOS

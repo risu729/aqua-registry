@@ -1,0 +1,44 @@
+packages:
+  - name: balena-io/balena-cli@v20.1.3
+  - name: balena-io/balena-cli
+    version: v18.2.10
+  - name: balena-io/balena-cli
+    version: v18.0.4
+  - name: balena-io/balena-cli
+    version: v17.4.6
+  - name: balena-io/balena-cli
+    version: v16.0.0
+  - name: balena-io/balena-cli
+    version: v12.3.9
+  - name: balena-io/balena-cli
+    version: v12.3.8
+  - name: balena-io/balena-cli
+    version: v11.34.0
+  - name: balena-io/balena-cli
+    version: v11.33.2
+  - name: balena-io/balena-cli
+    version: v11.0.6
+  - name: balena-io/balena-cli
+    version: v11.0.5
+  - name: balena-io/balena-cli
+    version: v11.0.0
+  - name: balena-io/balena-cli
+    version: v10.17.6
+  - name: balena-io/balena-cli
+    version: v10.16.0
+  - name: balena-io/balena-cli
+    version: v9.9.1
+  - name: balena-io/balena-cli
+    version: v9.6.0
+  - name: balena-io/balena-cli
+    version: v9.0.2
+  - name: balena-io/balena-cli
+    version: v9.0.1
+  - name: balena-io/balena-cli
+    version: v8.1.1
+  - name: balena-io/balena-cli
+    version: v7.10.3
+  - name: balena-io/balena-cli
+    version: v7.10.2
+  - name: balena-io/balena-cli
+    version: v6.10.2
