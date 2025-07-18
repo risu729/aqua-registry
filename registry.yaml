@@ -52378,6 +52378,42 @@ packages:
       - linux
       - amd64
   - type: github_release
+    repo_owner: mobile-dev-inc
+    repo_name: maestro
+    description: Painless E2E Automation for Mobile and Web
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 1.38.1")
+        checksum:
+          type: github_release
+          asset: checksums_sha256.txt
+          algorithm: sha256
+      - version_constraint: semver("<= 1.39.0-dev.2")
+      - version_constraint: semver("<= 1.39.13")
+        checksum:
+          type: github_release
+          asset: checksums_sha256.txt
+          algorithm: sha256
+      - version_constraint: Version == "cli-1.40.0-dev.1"
+      - version_constraint: semver("<= 1.40.1")
+        checksum:
+          type: github_release
+          asset: checksums_sha256.txt
+          algorithm: sha256
+      - version_constraint: Version == "cli-1.40.2-dev.1"
+      - version_constraint: Version == "cli-1.40.2"
+        checksum:
+          type: github_release
+          asset: checksums_sha256.txt
+          algorithm: sha256
+      - version_constraint: Version == "cli-1.40.3-dev.1"
+      - version_constraint: Version == "cli-1.40.3"
+        checksum:
+          type: github_release
+          asset: checksums_sha256.txt
+          algorithm: sha256
+      - version_constraint: "true"
+  - type: github_release
     repo_owner: moby
     repo_name: buildkit
     description: concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit

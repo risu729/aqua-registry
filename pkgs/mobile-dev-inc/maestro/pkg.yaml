@@ -1,0 +1,20 @@
+packages:
+  - name: mobile-dev-inc/maestro@cli-1.41.0-dev.2
+  - name: mobile-dev-inc/maestro
+    version: cli-1.40.3
+  - name: mobile-dev-inc/maestro
+    version: cli-1.40.3-dev.1
+  - name: mobile-dev-inc/maestro
+    version: cli-1.40.2
+  - name: mobile-dev-inc/maestro
+    version: cli-1.40.2-dev.1
+  - name: mobile-dev-inc/maestro
+    version: cli-1.40.1
+  - name: mobile-dev-inc/maestro
+    version: cli-1.40.0-dev.1
+  - name: mobile-dev-inc/maestro
+    version: cli-1.39.13
+  - name: mobile-dev-inc/maestro
+    version: cli-1.39.0-dev.2
+  - name: mobile-dev-inc/maestro
+    version: cli-1.38.1
