@@ -1,0 +1,6 @@
+packages:
+  - name: square/certstrap@v1.3.0
+  - name: square/certstrap
+    version: v1.2.0
+  - name: square/certstrap
+    version: v1.1.1
