@@ -58370,6 +58370,42 @@ packages:
         windows_arm_emulation: true
         complete_windows_ext: false
   - type: github_release
+    repo_owner: owasp-amass
+    repo_name: amass
+    description: In-depth attack surface mapping and asset discovery
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 3.22.2")
+        asset: amass_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        checksum:
+          type: github_release
+          asset: amass_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+      - version_constraint: "true"
+        asset: amass_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: amass_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+  - type: github_release
     repo_owner: owenrumney
     repo_name: squealer
     description: Telling tales on you for leaking secrets

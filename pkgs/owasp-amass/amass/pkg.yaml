@@ -1,0 +1,4 @@
+packages:
+  - name: owasp-amass/amass@v4.2.0
+  - name: owasp-amass/amass
+    version: v3.22.2
