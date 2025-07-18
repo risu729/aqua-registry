@@ -1,0 +1,38 @@
+packages:
+  - name: odin-lang/Odin@dev-2025-07
+  - name: odin-lang/Odin
+    version: dev-2025-06
+  - name: odin-lang/Odin
+    version: dev-2025-04
+  - name: odin-lang/Odin
+    version: dev-2025-02
+  - name: odin-lang/Odin
+    version: dev-2025-01
+  - name: odin-lang/Odin
+    version: dev-2024-12
+  - name: odin-lang/Odin
+    version: dev-2024-11
+  - name: odin-lang/Odin
+    version: dev-2024-09
+  - name: odin-lang/Odin
+    version: dev-2024-02
+  - name: odin-lang/Odin
+    version: dev-2023-12
+  - name: odin-lang/Odin
+    version: dev-2023-11
+  - name: odin-lang/Odin
+    version: dev-2022-05
+  - name: odin-lang/Odin
+    version: dev-2022-04
+  - name: odin-lang/Odin
+    version: dev-2022-03
+  - name: odin-lang/Odin
+    version: dev-2022-01
+  - name: odin-lang/Odin
+    version: v0.12.0
+  - name: odin-lang/Odin
+    version: v0.11.0
+  - name: odin-lang/Odin
+    version: v0.10.0
+  - name: odin-lang/Odin
+    version: 0.9.1

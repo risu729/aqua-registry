@@ -1,0 +1,179 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: odin-lang
+    repo_name: Odin
+    description: Odin Programming Language
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.9.1")
+      - version_constraint: Version == "v0.10.0"
+        asset: odin-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        overrides:
+          - goos: linux
+            format: tar.gz
+        supported_envs:
+          - linux/amd64
+          - windows/amd64
+      - version_constraint: Version == "v0.11.0"
+        asset: odin-{{.Version}}-{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        supported_envs:
+          - windows/amd64
+      - version_constraint: semver("<= 0.12.0")
+      - version_constraint: Version == "v0.13.0"
+        no_asset: true
+      - version_constraint: semver("<= 2022.0.0-01")
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 2022.0.0-03")
+        asset: odin-{{.OS}}-{{.Version}}.{{.Format}}
+        format: zip
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "dev-2022-04"
+        asset: odin-{{.OS}}_{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "dev-2022-05"
+        asset: "{{.OS}}_{{.Arch}}_{{.Version}}.{{.Format}}"
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 2023.0.0-11")
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "dev-2023-12"
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: mac
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 2024.0.0-02")
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 2024.0.0-09")
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 2024.0.0-11")
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "dev-2024-12"
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 2025.0.0-01")
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "dev-2025-02"
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 2025.0.0-04")
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "dev-2025-06"
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: zip
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: odin-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
