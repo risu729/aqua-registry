@@ -1,0 +1,131 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: weaveworks
+    repo_name: weave-gitops
+    description: Weave GitOps is transitioning to a community driven project! It provides insights into your application deployments, and makes continuous delivery with GitOps easier to adopt and scale across your teams
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["v0.0.1", "v0.0.3", "v0.7.0-rc3"]
+        no_asset: true
+      - version_constraint: Version == "v0.0.2"
+        asset: weave-gitops_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: weave-gitops_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: Version == "v0.0.4-rc0"
+        asset: wego-{{.OS}}-{{.Arch}}
+        format: raw
+        replacements:
+          amd64: x86_64
+        checksum:
+          type: github_release
+          asset: wego_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: Version == "v0.0.4"
+        asset: wego-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+        checksum:
+          type: github_release
+          asset: wego_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 0.2.5")
+        asset: wego-{{.OS}}-{{.Arch}}
+        format: raw
+        replacements:
+          amd64: x86_64
+        checksum:
+          type: github_release
+          asset: wego_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 0.4.1")
+        asset: gitops-{{.OS}}-{{.Arch}}
+        format: raw
+        replacements:
+          amd64: x86_64
+        checksum:
+          type: github_release
+          asset: gitops_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 0.26.0")
+        asset: gitops-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x86_64
+        checksum:
+          type: github_release
+          asset: gitops_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 0.39.0-rc.2")
+        asset: gitops-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        checksum:
+          type: github_release
+          asset: gitops_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: gitops-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: x86_64
+        checksum:
+          type: github_release
+          asset: gitops_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: arm
+        supported_envs:
+          - linux
+          - darwin

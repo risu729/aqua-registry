@@ -1,0 +1,16 @@
+packages:
+  - name: weaveworks/weave-gitops@v2-preview-1
+  - name: weaveworks/weave-gitops
+    version: v0.39.0-rc.2
+  - name: weaveworks/weave-gitops
+    version: v0.26.0
+  - name: weaveworks/weave-gitops
+    version: v0.4.1
+  - name: weaveworks/weave-gitops
+    version: v0.2.5
+  - name: weaveworks/weave-gitops
+    version: v0.0.4
+  - name: weaveworks/weave-gitops
+    version: v0.0.4-rc0
+  - name: weaveworks/weave-gitops
+    version: v0.0.2
