@@ -1,0 +1,6 @@
+packages:
+  - name: vmware-tanzu/sonobuoy@v0.57.3
+  - name: vmware-tanzu/sonobuoy
+    version: v0.56.0
+  - name: vmware-tanzu/sonobuoy
+    version: v0.16.4
