@@ -1,0 +1,12 @@
+packages:
+  - name: konstructio/kubefirst@v2.8.4
+  - name: konstructio/kubefirst
+    version: 1.11.1
+  - name: konstructio/kubefirst
+    version: 1.10.1
+  - name: konstructio/kubefirst
+    version: 1.9.0
+  - name: konstructio/kubefirst
+    version: 1.8.0-rc-3
+  - name: konstructio/kubefirst
+    version: 1.8.0-rc-2
