@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: vultr
+    repo_name: vultr-cli
+    description: Official command line tool for Vultr services
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.1.0"
+        asset: vultr-cli_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        overrides:
+          - goos: windows
+            format: zip
+            asset: vultr-cli_{{.OS}}_{{.Arch}}.exe.{{.Format}}
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v2.18.2"
+        asset: "{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          arm64: arm
+          darwin: macOs
+        checksum:
+          type: github_release
+          asset: vultr-cli_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: "{{trimV .Version}}_{{.OS}}_{{.Arch}}32-v6.{{.Format}}"
+          - goos: darwin
+            replacements:
+              arm64: arm64
+          - goos: windows
+            goarch: amd64
+            format: zip
+          - goos: windows
+            goarch: arm64
+            format: zip
+            asset: "{{trimV .Version}}_{{.OS}}_{{.Arch}}32-v6.{{.Format}}"
+      - version_constraint: semver("<= 2.3.0")
+        asset: vultr-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: 64-bit
+          darwin: macOs
+        checksum:
+          type: github_release
+          asset: vultr-cli_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 2.12.1")
+        asset: vultr-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: 64-bit
+          darwin: macOs
+        checksum:
+          type: github_release
+          asset: vultr-cli_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: vultr-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-bit.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: vultr-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-bit.{{.Format}}
+          - goos: windows
+            format: zip
+      - version_constraint: semver("<= 2.17.0")
+        asset: vultr-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          amd64: 64-bit
+          darwin: macOs
+        checksum:
+          type: github_release
+          asset: vultr-cli_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: vultr-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-bit.{{.Format}}
+          - goos: darwin
+            goarch: arm64
+            asset: vultr-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-bit.{{.Format}}
+          - goos: windows
+            goarch: amd64
+            format: zip
+          - goos: windows
+            goarch: arm64
+            format: zip
+            asset: vultr-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-bit.{{.Format}}
+      - version_constraint: "true"
+        asset: vultr-cli_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        replacements:
+          arm64: arm
+          darwin: macOs
+        checksum:
+          type: github_release
+          asset: vultr-cli_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: vultr-cli_{{.Version}}_{{.OS}}_{{.Arch}}32-v6.{{.Format}}
+          - goos: darwin
+            replacements:
+              arm64: arm64
+          - goos: windows
+            goarch: amd64
+            format: zip
+          - goos: windows
+            goarch: arm64
+            format: zip
+            asset: vultr-cli_{{.Version}}_{{.OS}}_{{.Arch}}32-v6.{{.Format}}

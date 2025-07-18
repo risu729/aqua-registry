@@ -1,0 +1,12 @@
+packages:
+  - name: vultr/vultr-cli@v3.6.0
+  - name: vultr/vultr-cli
+    version: v2.18.2
+  - name: vultr/vultr-cli
+    version: v2.17.0
+  - name: vultr/vultr-cli
+    version: v2.12.1
+  - name: vultr/vultr-cli
+    version: v2.3.0
+  - name: vultr/vultr-cli
+    version: v0.1.0
