@@ -61239,6 +61239,47 @@ packages:
       asset: tf2pulumi_{{trimV .Version}}_checksums.txt
       algorithm: sha256
   - type: github_release
+    repo_owner: purerl
+    repo_name: purerl
+    description: Erlang backend for the PureScript compiler
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.0.19")
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        overrides:
+          - goos: linux
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: "{{.OS}}.{{.Format}}"
+        format: tar.gz
+        replacements:
+          darwin: macos
+          windows: win64
+        overrides:
+          - goos: linux
+            goarch: amd64
+            asset: "{{.OS}}64.{{.Format}}"
+            replacements:
+              amd64: x64
+          - goos: linux
+            goarch: arm64
+            asset: "{{.OS}}-{{.Arch}}.{{.Format}}"
+            replacements:
+              arm64: aarch64
+          - goos: darwin
+            goarch: arm64
+            asset: "{{.OS}}-{{.Arch}}.{{.Format}}"
+  - type: github_release
     repo_owner: purpleclay
     repo_name: dns53
     description: Dynamic DNS within Amazon Route53. Expose your EC2 quickly, easily and privately
