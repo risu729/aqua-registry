@@ -1,0 +1,294 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: nektro
+    repo_name: zigmod
+    description: A package manager for the Zig programming language
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v2-88c035e"
+        asset: zigmod-{{.Version}}-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v7-b0fd757"
+        asset: zigmod-go-{{.Version}}-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v8-1993719"
+        asset: zigmod-zig-{{.Version}}-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 18.0.0-3d01c20")
+        asset: zigmod-{{.Version}}-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: Version == "v19-58d84ba"
+        asset: zigmod-v19.58d84ba-{{.Arch}}-{{.OS}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+      - version_constraint: Version == "v20-0ef0ceb"
+        asset: zigmod-v20.0ef0ceb-{{.Arch}}-{{.OS}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+      - version_constraint: semver("<= 22.0.0")
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: linux
+            replacements:
+              arm64: aarch64
+      - version_constraint: semver("<= 63.0.0")
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: Version == "v64"
+        asset: zigmod-x86_{{trimV .Version}}-{{.OS}}
+        format: raw
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 82.0.0")
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: semver("<= 83.0.0")
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: Version == "v83"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: semver("<= 85.0.0")
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: Version == "v85"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: Version == "r86"
+        asset: zigmod-x{{.SemVer}}_64-{{.OS}}
+        format: raw
+        replacements:
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: zigmod-{{.Arch}}-{{.OS}}
+          - goos: darwin
+            goarch: arm64
+            asset: zigmod-{{.Arch}}-{{.OS}}
+          - goos: windows
+            goarch: arm64
+            asset: zigmod-{{.Arch}}-{{.OS}}
+      - version_constraint: Version == "v86"
+        asset: zigmod-x{{trimV .Version}}_64-{{.OS}}
+        format: raw
+        replacements:
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: linux
+            goarch: arm64
+            asset: zigmod-{{.Arch}}-{{.OS}}
+          - goos: darwin
+            goarch: arm64
+            asset: zigmod-{{.Arch}}-{{.OS}}
+      - version_constraint: Version == "r87"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: Version == "v87"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: Version == "r88"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: Version == "v88"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: Version == "r89"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: Version == "v89"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: Version == "r90"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: Version == "v90"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: Version == "r91"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: Version == "v91"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+        overrides:
+          - goos: windows
+            replacements: {}
+      - version_constraint: Version == "r92"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: semver("<= 93.0.0")
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos
+      - version_constraint: "true"
+        asset: zigmod-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+          darwin: macos

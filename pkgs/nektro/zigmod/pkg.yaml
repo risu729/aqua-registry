@@ -1,0 +1,58 @@
+packages:
+  - name: nektro/zigmod@r93
+  - name: nektro/zigmod
+    version: v93
+  - name: nektro/zigmod
+    version: r92
+  - name: nektro/zigmod
+    version: r91
+  - name: nektro/zigmod
+    version: v91
+  - name: nektro/zigmod
+    version: v90
+  - name: nektro/zigmod
+    version: r90
+  - name: nektro/zigmod
+    version: v89
+  - name: nektro/zigmod
+    version: r89
+  - name: nektro/zigmod
+    version: v88
+  - name: nektro/zigmod
+    version: r88
+  - name: nektro/zigmod
+    version: r87
+  - name: nektro/zigmod
+    version: v87
+  - name: nektro/zigmod
+    version: r86
+  - name: nektro/zigmod
+    version: v86
+  - name: nektro/zigmod
+    version: v85
+  - name: nektro/zigmod
+    version: r85
+  - name: nektro/zigmod
+    version: r83
+  - name: nektro/zigmod
+    version: v83
+  - name: nektro/zigmod
+    version: v82
+  - name: nektro/zigmod
+    version: v64
+  - name: nektro/zigmod
+    version: v63
+  - name: nektro/zigmod
+    version: v22
+  - name: nektro/zigmod
+    version: v20-0ef0ceb
+  - name: nektro/zigmod
+    version: v19-58d84ba
+  - name: nektro/zigmod
+    version: v18-3d01c20
+  - name: nektro/zigmod
+    version: v8-1993719
+  - name: nektro/zigmod
+    version: v7-b0fd757
+  - name: nektro/zigmod
+    version: v2-88c035e
