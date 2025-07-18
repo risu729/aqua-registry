@@ -1,0 +1,40 @@
+packages:
+  - name: rancher/k3k@v0.3.3
+  - name: rancher/k3k
+    version: chart-0.3.3-r6
+  - name: rancher/k3k
+    version: v0.3.2
+  - name: rancher/k3k
+    version: v0.3.2-rc1
+  - name: rancher/k3k
+    version: chart-0.3.1-r2
+  - name: rancher/k3k
+    version: v0.3.1-8-g90568f2
+  - name: rancher/k3k
+    version: v0.2.2-rc1
+  - name: rancher/k3k
+    version: v0.2.1
+  - name: rancher/k3k
+    version: v0.2.0
+  - name: rancher/k3k
+    version: chart-0.1.6-r1
+  - name: rancher/k3k
+    version: chart-0.1.4-r1
+  - name: rancher/k3k
+    version: v0.1.1
+  - name: rancher/k3k
+    version: k3k-0.1.1
+  - name: rancher/k3k
+    version: chart-0.1.1-r1
+  - name: rancher/k3k
+    version: k3k-0.1.1-k3k1
+  - name: rancher/k3k
+    version: v0.1.0
+  - name: rancher/k3k
+    version: chart-0.1.0-r2
+  - name: rancher/k3k
+    version: chart-0.1.0-r1
+  - name: rancher/k3k
+    version: v0.0.0-alpha7
+  - name: rancher/k3k
+    version: v0.0.0-alpha5

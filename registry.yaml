@@ -61826,6 +61826,168 @@ packages:
       algorithm: sha256
   - type: github_release
     repo_owner: rancher
+    repo_name: k3k
+    description: Kubernetes in Kubernetes
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "v0.0.0-alpha1"
+        no_asset: true
+      - version_constraint: Version in ["chart-0.1.0-r1", "chart-0.3.0-r1", "chart-0.3.2", "chart-0.3.3"]
+      - version_constraint: Version == "chart-0.1.0-r2"
+        checksum:
+          type: github_release
+          asset: sha256sum-{{.Arch}}.txt
+          algorithm: sha256
+      - version_constraint: Version == "v0.1.0"
+        asset: k3k-{{.OS}}
+        format: raw
+        rosetta2: true
+        complete_windows_ext: false
+        checksum:
+          type: github_release
+          asset: sha256sum-{{.Arch}}.txt
+          algorithm: sha256
+        overrides:
+          - goos: darwin
+            asset: k3k-{{.OS}}-{{.Arch}}
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "chart-0.1.1-r1"
+        checksum:
+          type: github_release
+          asset: sha256sum.txt
+          algorithm: sha256
+      - version_constraint: Version == "k3k-0.1.1"
+      - version_constraint: Version == "v0.2.1"
+        asset: k3k-{{.OS}}-{{.Arch}}
+        format: raw
+        complete_windows_ext: false
+        checksum:
+          type: github_release
+          asset: sha256sum-{{.Arch}}.txt
+          algorithm: sha256
+        overrides:
+          - goos: darwin
+            replacements:
+              arm64: aarch64
+          - goos: windows
+            asset: k3k-{{.OS}}
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "v0.2.2-rc1"
+        asset: k3k-{{.OS}}-{{.Arch}}
+        format: raw
+        complete_windows_ext: false
+        overrides:
+          - goos: darwin
+            replacements:
+              arm64: aarch64
+          - goos: windows
+            asset: k3k-{{.OS}}
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: Version == "v0.3.2"
+        asset: k3k-{{.OS}}-{{.Arch}}
+        format: raw
+        checksum:
+          type: github_release
+          asset: k3k_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: darwin
+            asset: k3kcli-{{.OS}}-{{.Arch}}
+          - goos: windows
+            format: zip
+            asset: k3kcli-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 0.0.0-alpha5")
+      - version_constraint: semver("<= 0.0.0-alpha7")
+        checksum:
+          type: github_release
+          asset: sha256sum-{{.Arch}}.txt
+          algorithm: sha256
+      - version_constraint: semver("<= 0.1.1-k3k1")
+      - version_constraint: semver("<= 0.1.1")
+        asset: k3k-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        complete_windows_ext: false
+        checksum:
+          type: github_release
+          asset: sha256sum-{{.Arch}}.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            asset: k3k-{{.OS}}
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 0.1.4-r1")
+        checksum:
+          type: github_release
+          asset: sha256sum.txt
+          algorithm: sha256
+      - version_constraint: semver("<= 0.1.6-r1")
+      - version_constraint: semver("<= 0.2.0")
+        asset: k3k-{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        complete_windows_ext: false
+        checksum:
+          type: github_release
+          asset: sha256sum-{{.Arch}}.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            asset: k3k-{{.OS}}
+        supported_envs:
+          - darwin
+          - windows/amd64
+      - version_constraint: semver("<= 0.3.1-8-g90568f2")
+        asset: k3k-{{.OS}}-{{.Arch}}
+        format: raw
+        checksum:
+          type: github_release
+          asset: k3k_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: darwin
+            asset: k3kcli-{{.OS}}-{{.Arch}}
+          - goos: windows
+            format: zip
+            asset: k3kcli-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 0.3.1-r2")
+      - version_constraint: semver("<= 0.3.2-rc1")
+        asset: k3k-{{.OS}}-{{.Arch}}
+        format: raw
+        checksum:
+          type: github_release
+          asset: k3k_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: darwin
+            asset: k3kcli-{{.OS}}-{{.Arch}}
+          - goos: windows
+            format: zip
+            asset: k3kcli-{{.OS}}-{{.Arch}}.{{.Format}}
+      - version_constraint: semver("<= 0.3.3-r6")
+      - version_constraint: "true"
+        asset: k3kcli-{{.OS}}-{{.Arch}}
+        format: raw
+        checksum:
+          type: github_release
+          asset: k3k_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            asset: k3k-{{.OS}}-{{.Arch}}
+          - goos: windows
+            format: zip
+            asset: k3kcli-{{.OS}}-{{.Arch}}.{{.Format}}
+  - type: github_release
+    repo_owner: rancher
     repo_name: kim
     description: In ur kubernetes, buildin ur imagez
     version_constraint: "false"
