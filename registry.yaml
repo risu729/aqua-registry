@@ -44175,6 +44175,50 @@ packages:
               asset: kaytu_{{trimV .Version}}_{{.OS}}_{{.Arch}}_checksum.txt
               algorithm: sha256
   - type: github_release
+    repo_owner: kcctl
+    repo_name: kcctl
+    description: A modern and intuitive command line client for Kafka Connect
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "1.0.0-early-access"
+        asset: kcctl-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: osx
+        checksum:
+          type: github_release
+          asset: checksums_sha256.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            format: tar.gz
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: "true"
+        asset: kcctl-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: zip
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: osx
+        checksum:
+          type: github_release
+          asset: checksums_sha256.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            format: tar.gz
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+  - type: github_release
     repo_owner: kcl-lang
     repo_name: cli
     description: The KCL Command Line Interface (CLI)

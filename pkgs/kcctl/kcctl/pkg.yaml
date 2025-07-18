@@ -1,0 +1,4 @@
+packages:
+  - name: kcctl/kcctl@v1.0.0.Alpha1
+  - name: kcctl/kcctl
+    version: 1.0.0-early-access
