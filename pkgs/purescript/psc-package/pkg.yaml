@@ -1,0 +1,8 @@
+packages:
+  - name: purescript/psc-package@v0.6.2
+  - name: purescript/psc-package
+    version: v0.1.4
+  - name: purescript/psc-package
+    version: v0.1.3
+  - name: purescript/psc-package
+    version: v0.1.2
