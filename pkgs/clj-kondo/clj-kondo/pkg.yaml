@@ -1,0 +1,14 @@
+packages:
+  - name: clj-kondo/clj-kondo@v2022.02.09
+  - name: clj-kondo/clj-kondo
+    version: v2021.08.03
+  - name: clj-kondo/clj-kondo
+    version: v2021.07.28
+  - name: clj-kondo/clj-kondo
+    version: v2019.11.07
+  - name: clj-kondo/clj-kondo
+    version: v2019.07.31-alpha
+  - name: clj-kondo/clj-kondo
+    version: v2019.05.12-alpha
+  - name: clj-kondo/clj-kondo
+    version: 2019.03.27-alpha
