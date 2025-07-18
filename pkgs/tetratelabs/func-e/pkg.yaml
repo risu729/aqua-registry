@@ -1,0 +1,6 @@
+packages:
+  - name: tetratelabs/func-e@v1.1.5
+  - name: tetratelabs/func-e
+    version: v1.1.4
+  - name: tetratelabs/func-e
+    version: v0.5.1
