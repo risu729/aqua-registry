@@ -1,0 +1,2 @@
+packages:
+  - name: protocolbuffers/protobuf-javascript@v3.21.4
