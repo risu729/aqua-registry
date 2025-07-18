@@ -1,0 +1,6 @@
+packages:
+  - name: greglook/cljstyle@0.17.642
+  - name: greglook/cljstyle
+    version: 0.15.0
+  - name: greglook/cljstyle
+    version: 0.8.3
