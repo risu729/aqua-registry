@@ -1,0 +1,6 @@
+packages:
+  - name: ConduitIO/conduit@v0.15.0-nightly.20250718
+  - name: ConduitIO/conduit
+    version: v0.7.1
+  - name: ConduitIO/conduit
+    version: v0.1.1
