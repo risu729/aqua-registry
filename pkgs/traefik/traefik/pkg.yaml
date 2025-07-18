@@ -1,0 +1,24 @@
+packages:
+  - name: traefik/traefik@v3.5.0-rc2
+  - name: traefik/traefik
+    version: v2.5.0
+  - name: traefik/traefik
+    version: v2.5.0-rc5
+  - name: traefik/traefik
+    version: v2.4.8
+  - name: traefik/traefik
+    version: v2.4.6
+  - name: traefik/traefik
+    version: v2.0.0-alpha3
+  - name: traefik/traefik
+    version: v1.7.34
+  - name: traefik/traefik
+    version: v1.4.2
+  - name: traefik/traefik
+    version: v1.0.alpha.0e683cc5355bc507dabac68bbc7559d3f179e185
+  - name: traefik/traefik
+    version: v1.0.3
+  - name: traefik/traefik
+    version: v1.0.0-rc3
+  - name: traefik/traefik
+    version: v1.0.0-beta.621

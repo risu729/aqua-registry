@@ -1,0 +1,140 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: traefik
+    repo_name: traefik
+    description: The Cloud Native Application Proxy
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 1.0.0-beta.621")
+        asset: traefik_{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        replacements:
+          arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 1.0.0-rc3")
+        asset: traefik_{{.OS}}-{{.Arch}}
+        format: raw
+        replacements:
+          arm64: arm
+        supported_envs:
+          - linux
+      - version_constraint: semver("<= 1.0.3")
+        asset: traefik_{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        complete_windows_ext: false
+        replacements:
+          arm64: arm
+      - version_constraint: Version in ["v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d", "v1.0.alpha.e0872b61579c8e6b8fc6124c8836660c11840f5d"]
+        asset: traefik_{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        replacements:
+          arm64: arm
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 1.4.2")
+        asset: traefik_{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        complete_windows_ext: false
+        replacements:
+          arm64: arm
+      - version_constraint: semver("<= 1.7.34")
+        asset: traefik_{{.OS}}-{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        replacements:
+          arm64: arm
+      - version_constraint: semver("<= 2.0.0-alpha3")
+        asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: traefik_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: semver("<= 2.4.6")
+        asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        rosetta2: true
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: traefik_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: semver("<= 2.4.8")
+        asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: traefik_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+      - version_constraint: semver("<= 2.5.0-rc5")
+        asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        checksum:
+          type: github_release
+          asset: traefik_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            format: tar.gz
+          - goos: darwin
+            format: tar.gz
+          - goos: windows
+            goarch: arm64
+            asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}v5.{{.Format}}
+            replacements:
+              arm64: arm
+      - version_constraint: semver("<= 2.5.0")
+        asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}v5.{{.Format}}
+        format: zip
+        rosetta2: true
+        checksum:
+          type: github_release
+          asset: traefik_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: linux
+            format: tar.gz
+            asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+          - goos: darwin
+            format: tar.gz
+            asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+          - goos: windows
+            goarch: amd64
+            asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+          - goos: windows
+            goarch: arm64
+            replacements:
+              arm64: arm
+      - version_constraint: "true"
+        asset: traefik_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: traefik_{{.Version}}_checksums.txt
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
