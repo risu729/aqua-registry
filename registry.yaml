@@ -45744,6 +45744,14 @@ packages:
       asset: checksums.txt
       algorithm: sha256
   - type: github_release
+    repo_owner: kscripting
+    repo_name: kscript
+    description: Scripting enhancements for Kotlin
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: "true"
+        no_asset: true
+  - type: github_release
     repo_owner: ktock
     repo_name: buildg
     description: Interactive debugger for Dockerfile, with support for IDEs (VS Code, Emacs, Neovim, etc.)
