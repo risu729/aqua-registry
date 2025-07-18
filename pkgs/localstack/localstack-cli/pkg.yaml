@@ -1,0 +1,8 @@
+packages:
+  - name: localstack/localstack-cli@v4.6.0
+  - name: localstack/localstack-cli
+    version: v4.3.0
+  - name: localstack/localstack-cli
+    version: v3.0.2.post0
+  - name: localstack/localstack-cli
+    version: v2.3.2.post0
