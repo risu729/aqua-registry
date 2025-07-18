@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: databus23
+    repo_name: helm-diff
+    description: A helm plugin that shows a diff explaining what a helm upgrade would change
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 2.7.0+1")
+        asset: helm-diff-{{.OS}}.{{.Format}}
+        format: tgz
+        replacements:
+          darwin: macos
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 3.1.3")
+        asset: helm-diff-{{.OS}}.{{.Format}}
+        format: tgz
+        replacements:
+          darwin: macos
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+      - version_constraint: semver("<= 3.8.1")
+        asset: helm-diff-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        windows_arm_emulation: true
+        replacements:
+          darwin: macos
+      - version_constraint: "true"
+        asset: helm-diff-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tgz
+        replacements:
+          darwin: macos
+        checksum:
+          type: github_release
+          asset: helm-diff_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
