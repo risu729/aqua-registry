@@ -46166,6 +46166,26 @@ packages:
         asset: setup-envtest-{{.OS}}-{{.Arch}}
         format: raw
         windows_arm_emulation: true
+  - type: github_release
+    repo_owner: kubernetes-sigs
+    repo_name: controller-tools
+    description: Tools to use with the controller-runtime libraries
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.15.0")
+        no_asset: true
+      - version_constraint: semver("<= 0.18.0")
+        asset: controller-gen-{{.OS}}-{{.Arch}}
+        format: raw
+        windows_arm_emulation: true
+      - version_constraint: "true"
+        asset: "{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}"
+        format: tar.gz
+        windows_arm_emulation: true
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha512"
+          algorithm: sha512
   - type: go_install
     name: kubernetes-sigs/controller-tools/controller-gen
     search_words:

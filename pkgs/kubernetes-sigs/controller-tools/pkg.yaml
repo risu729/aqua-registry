@@ -1,0 +1,4 @@
+packages:
+  - name: kubernetes-sigs/controller-tools@envtest-v1.34.0-alpha.1
+  - name: kubernetes-sigs/controller-tools
+    version: v0.18.0
