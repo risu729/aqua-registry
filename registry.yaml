@@ -23972,6 +23972,17 @@ packages:
             - --signature
             - https://storage.googleapis.com/cri-o/artifacts/cri-o.{{.Arch}}.{{.Version}}.tar.gz.sig
   - type: github_release
+    repo_owner: cross-language-cpp
+    repo_name: djinni-generator
+    description: Command-line tool that generates gluecode from a djinni-IDL file
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: "true"
+        checksum:
+          type: github_release
+          asset: "{{.Asset}}.sha256"
+          algorithm: sha256
+  - type: github_release
     repo_owner: cross-rs
     repo_name: cross
     description: “Zero setup” cross compilation and “cross testing” of Rust crates
