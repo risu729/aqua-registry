@@ -55957,6 +55957,115 @@ packages:
       - linux/amd64
       - windows/amd64
   - type: github_release
+    repo_owner: ocaml
+    repo_name: opam
+    description: opam is a source-based package manager. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version in ["1.2.0-beta2", "1.2.0-rc4"]
+      - version_constraint: Version == "1.2.0-rc1"
+        asset: opam-{{.Version}}-i686-{{.OS}}
+        format: raw
+        replacements:
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+      - version_constraint: Version == "2.2.0-alpha3"
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: windows
+            asset: opam-{{.Version}}-preview-for-{{.OS}}
+      - version_constraint: Version == "2.2.0-beta1"
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        overrides:
+          - goos: windows
+            asset: opam-{{.Version}}-{{.Arch}}-preview-for-{{.OS}}
+      - version_constraint: semver("<= 1.1.0")
+        no_asset: true
+      - version_constraint: semver("<= 1.1.1")
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 1.2.0-rc3")
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+      - version_constraint: semver("<= 2.0.0-beta3")
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: semver("<= 2.0.6")
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.0.10")
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.1.0-beta2")
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        rosetta2: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 2.2.0-alpha2")
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          darwin: macos
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: opam-{{.Version}}-{{.Arch}}-{{.OS}}
+        format: raw
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: macos
+  - type: github_release
     repo_owner: octohelm
     repo_name: cuemod
     description: experimental cuelang mod tool
