@@ -1,0 +1,4 @@
+packages:
+  - name: DarthSim/hivemind@v1.1.0
+  - name: DarthSim/hivemind
+    version: v1.0.6
