@@ -1,0 +1,12 @@
+packages:
+  - name: apollographql/rover@v0.34.1
+  - name: apollographql/rover
+    version: v0.17.0
+  - name: apollographql/rover
+    version: v0.9.1
+  - name: apollographql/rover
+    version: v0.2.0
+  - name: apollographql/rover
+    version: v0.1.0
+  - name: apollographql/rover
+    version: v0.0.3
