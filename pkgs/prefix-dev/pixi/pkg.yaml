@@ -1,0 +1,10 @@
+packages:
+  - name: prefix-dev/pixi@v0.49.0
+  - name: prefix-dev/pixi
+    version: v0.39.0
+  - name: prefix-dev/pixi
+    version: v0.17.1
+  - name: prefix-dev/pixi
+    version: v0.0.7
+  - name: prefix-dev/pixi
+    version: v0.0.1
