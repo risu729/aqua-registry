@@ -79,6 +79,19 @@ packages:
             goarch: arm64
             replacements:
               linux: unknown-linux-gnu
+  - type: github_release
+    repo_owner: 0ghny
+    repo_name: gitconfig
+    description: Cli to manage multiple gitconfigs with ease
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: "true"
+        asset: gitconfig_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: gitconfig_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
   - type: http
     name: 1password/cli
     url: https://cache.agilebits.com/dist/1P/op2/pkg/{{.Version}}/op_{{.OS}}_{{.Arch}}_{{.Version}}.zip
