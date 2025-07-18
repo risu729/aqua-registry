@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: databricks
+    repo_name: cli
+    description: Databricks CLI
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: Version == "snapshot"
+        asset: databricks_cli_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+      - version_constraint: Version == "v0.218.0"
+        asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        checksum:
+          type: github_release
+          asset: databricks_cli_{{trimV .Version}}_SHA256SUMS
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-signed.{{.Format}}
+      - version_constraint: semver("<= 0.0.1")
+        asset: bricks_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: bricks_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: semver("<= 0.0.32")
+        asset: bricks_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        checksum:
+          type: github_release
+          asset: bricks_{{trimV .Version}}_SHA256SUMS
+          algorithm: sha256
+      - version_constraint: semver("<= 0.221.0")
+        asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        checksum:
+          type: github_release
+          asset: databricks_cli_{{trimV .Version}}_SHA256SUMS
+          algorithm: sha256
+      - version_constraint: semver("<= 0.240.0")
+        asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        checksum:
+          type: github_release
+          asset: databricks_cli_{{trimV .Version}}_SHA256SUMS
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-signed.{{.Format}}
+      - version_constraint: semver("<= 0.241.2")
+        asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        checksum:
+          type: github_release
+          asset: databricks_cli_{{trimV .Version}}_SHA256SUMS
+          algorithm: sha256
+      - version_constraint: semver("<= 0.243.0")
+        asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: zip
+        checksum:
+          type: github_release
+          asset: databricks_cli_{{trimV .Version}}_SHA256SUMS
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-signed.{{.Format}}
+      - version_constraint: "true"
+        asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        checksum:
+          type: github_release
+          asset: databricks_cli_{{trimV .Version}}_SHA256SUMS
+          algorithm: sha256
+        overrides:
+          - goos: windows
+            format: zip
+            asset: databricks_cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}-signed.{{.Format}}
